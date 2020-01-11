@@ -1,0 +1,542 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище DataMiningModel" Provider="System.Data.SQLite.EF6" ProviderManifestToken="data source=Z:\Dn\DataMiningOffLine\DataMiningOffLine\DataMiningOffLine\bin\Debug\DataMining.db" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Depending_parametres">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="reasonparam_id" Type="integer" />
+          <Property Name="parameter_id" Type="integer" />
+          <Property Name="id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Emergency_situations">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="number_st" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="name_st" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="place_st" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="paramcritmin_re" Type="real" />
+          <Property Name="paramcritmax_re" Type="real" />
+          <Property Name="optimum_re" Type="real" />
+        </EntityType>
+        <EntityType Name="Materials">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name_st" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="order_id" Type="integer" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Measurements">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="param_id" Type="integer" />
+          <Property Name="order_id" Type="integer" />
+          <Property Name="time_st" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="value" Type="real" />
+        </EntityType>
+        <EntityType Name="Orders">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name_st" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="date_st" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="Parameters">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name_st" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="translateru_st" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="translateen_st" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="upperLimitPercent" Type="integer" />
+          <Property Name="lowerLimitPercent" Type="integer" />
+        </EntityType>
+        <EntityType Name="Reasons">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ES_id" Type="integer" />
+          <Property Name="text_st" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="reasonnumber_in" Type="integer" />
+          <Property Name="place_st" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityType Name="Recomendations">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="reason_id" Type="integer" />
+          <Property Name="number_in" Type="integer" />
+          <Property Name="text_st" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="param_st" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="place_st" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <Association Name="FK_Depending_parametres_0_0">
+          <End Role="Parameters" Type="Self.Parameters" Multiplicity="0..1" />
+          <End Role="Depending_parametres" Type="Self.Depending_parametres" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Parameters">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Depending_parametres">
+              <PropertyRef Name="parameter_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Depending_parametres_1_0">
+          <End Role="Reasons" Type="Self.Reasons" Multiplicity="0..1" />
+          <End Role="Depending_parametres" Type="Self.Depending_parametres" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Reasons">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Depending_parametres">
+              <PropertyRef Name="reasonparam_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Materials_0_0">
+          <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+          <End Role="Materials" Type="Self.Materials" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Materials">
+              <PropertyRef Name="order_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Measurements_0_0">
+          <End Role="Orders" Type="Self.Orders" Multiplicity="0..1" />
+          <End Role="Measurements" Type="Self.Measurements" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Measurements">
+              <PropertyRef Name="order_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Measurements_1_0">
+          <End Role="Parameters" Type="Self.Parameters" Multiplicity="0..1" />
+          <End Role="Measurements" Type="Self.Measurements" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Parameters">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Measurements">
+              <PropertyRef Name="param_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Reasons_0_0">
+          <End Role="Emergency_situations" Type="Self.Emergency_situations" Multiplicity="0..1" />
+          <End Role="Reasons" Type="Self.Reasons" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Emergency_situations">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Reasons">
+              <PropertyRef Name="ES_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Recomendations_0_0">
+          <End Role="Reasons" Type="Self.Reasons" Multiplicity="0..1" />
+          <End Role="Recomendations" Type="Self.Recomendations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Reasons">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Recomendations">
+              <PropertyRef Name="reason_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище DataMiningModelContainer">
+          <EntitySet Name="Depending_parametres" EntityType="Self.Depending_parametres" store:Type="Tables" />
+          <EntitySet Name="Emergency_situations" EntityType="Self.Emergency_situations" store:Type="Tables" />
+          <EntitySet Name="Materials" EntityType="Self.Materials" store:Type="Tables" />
+          <EntitySet Name="Measurements" EntityType="Self.Measurements" store:Type="Tables" />
+          <EntitySet Name="Orders" EntityType="Self.Orders" store:Type="Tables" />
+          <EntitySet Name="Parameters" EntityType="Self.Parameters" store:Type="Tables" />
+          <EntitySet Name="Reasons" EntityType="Self.Reasons" store:Type="Tables" />
+          <EntitySet Name="Recomendations" EntityType="Self.Recomendations" store:Type="Tables" />
+          <AssociationSet Name="FK_Depending_parametres_0_0" Association="Self.FK_Depending_parametres_0_0">
+            <End Role="Parameters" EntitySet="Parameters" />
+            <End Role="Depending_parametres" EntitySet="Depending_parametres" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Depending_parametres_1_0" Association="Self.FK_Depending_parametres_1_0">
+            <End Role="Reasons" EntitySet="Reasons" />
+            <End Role="Depending_parametres" EntitySet="Depending_parametres" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Materials_0_0" Association="Self.FK_Materials_0_0">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="Materials" EntitySet="Materials" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Measurements_0_0" Association="Self.FK_Measurements_0_0">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="Measurements" EntitySet="Measurements" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Measurements_1_0" Association="Self.FK_Measurements_1_0">
+            <End Role="Parameters" EntitySet="Parameters" />
+            <End Role="Measurements" EntitySet="Measurements" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Reasons_0_0" Association="Self.FK_Reasons_0_0">
+            <End Role="Emergency_situations" EntitySet="Emergency_situations" />
+            <End Role="Reasons" EntitySet="Reasons" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Recomendations_0_0" Association="Self.FK_Recomendations_0_0">
+            <End Role="Reasons" EntitySet="Reasons" />
+            <End Role="Recomendations" EntitySet="Recomendations" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DataMiningModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Depending_parametres">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="reasonparam_id" Type="Int64" />
+          <Property Name="parameter_id" Type="Int64" />
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Parameters" Relationship="Self.FK_Depending_parametres_0_0" FromRole="Depending_parametres" ToRole="Parameters" />
+          <NavigationProperty Name="Reasons" Relationship="Self.FK_Depending_parametres_1_0" FromRole="Depending_parametres" ToRole="Reasons" />
+        </EntityType>
+        <EntityType Name="Emergency_situations">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="number_st" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="name_st" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="place_st" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="paramcritmin_re" Type="Double" />
+          <Property Name="paramcritmax_re" Type="Double" />
+          <Property Name="optimum_re" Type="Double" />
+          <NavigationProperty Name="Reasons" Relationship="Self.FK_Reasons_0_0" FromRole="Emergency_situations" ToRole="Reasons" />
+        </EntityType>
+        <EntityType Name="Materials">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name_st" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="order_id" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="Orders" Relationship="Self.FK_Materials_0_0" FromRole="Materials" ToRole="Orders" />
+        </EntityType>
+        <EntityType Name="Measurements">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="param_id" Type="Int64" />
+          <Property Name="order_id" Type="Int64" />
+          <Property Name="time_st" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="value" Type="Double" />
+          <NavigationProperty Name="Orders" Relationship="Self.FK_Measurements_0_0" FromRole="Measurements" ToRole="Orders" />
+          <NavigationProperty Name="Parameters" Relationship="Self.FK_Measurements_1_0" FromRole="Measurements" ToRole="Parameters" />
+        </EntityType>
+        <EntityType Name="Orders">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name_st" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="date_st" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Materials" Relationship="Self.FK_Materials_0_0" FromRole="Orders" ToRole="Materials" />
+          <NavigationProperty Name="Measurements" Relationship="Self.FK_Measurements_0_0" FromRole="Orders" ToRole="Measurements" />
+        </EntityType>
+        <EntityType Name="Parameters">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name_st" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="translateru_st" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="translateen_st" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="upperLimitPercent" Type="Int64" />
+          <Property Name="lowerLimitPercent" Type="Int64" />
+          <NavigationProperty Name="Depending_parametres" Relationship="Self.FK_Depending_parametres_0_0" FromRole="Parameters" ToRole="Depending_parametres" />
+          <NavigationProperty Name="Measurements" Relationship="Self.FK_Measurements_1_0" FromRole="Parameters" ToRole="Measurements" />
+        </EntityType>
+        <EntityType Name="Reasons">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ES_id" Type="Int64" />
+          <Property Name="text_st" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="reasonnumber_in" Type="Int64" />
+          <Property Name="place_st" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Depending_parametres" Relationship="Self.FK_Depending_parametres_1_0" FromRole="Reasons" ToRole="Depending_parametres" />
+          <NavigationProperty Name="Emergency_situations" Relationship="Self.FK_Reasons_0_0" FromRole="Reasons" ToRole="Emergency_situations" />
+          <NavigationProperty Name="Recomendations" Relationship="Self.FK_Recomendations_0_0" FromRole="Reasons" ToRole="Recomendations" />
+        </EntityType>
+        <EntityType Name="Recomendations">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="reason_id" Type="Int64" />
+          <Property Name="number_in" Type="Int64" />
+          <Property Name="text_st" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="param_st" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="place_st" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Reasons" Relationship="Self.FK_Recomendations_0_0" FromRole="Recomendations" ToRole="Reasons" />
+        </EntityType>
+        <Association Name="FK_Depending_parametres_0_0">
+          <End Role="Parameters" Type="Self.Parameters" Multiplicity="0..1" />
+          <End Role="Depending_parametres" Type="Self.Depending_parametres" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Parameters">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Depending_parametres">
+              <PropertyRef Name="parameter_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Depending_parametres_1_0">
+          <End Role="Reasons" Type="Self.Reasons" Multiplicity="0..1" />
+          <End Role="Depending_parametres" Type="Self.Depending_parametres" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Reasons">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Depending_parametres">
+              <PropertyRef Name="reasonparam_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Reasons_0_0">
+          <End Role="Emergency_situations" Type="Self.Emergency_situations" Multiplicity="0..1" />
+          <End Role="Reasons" Type="Self.Reasons" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Emergency_situations">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Reasons">
+              <PropertyRef Name="ES_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Materials_0_0">
+          <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+          <End Role="Materials" Type="Self.Materials" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Materials">
+              <PropertyRef Name="order_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Measurements_0_0">
+          <End Role="Orders" Type="Self.Orders" Multiplicity="0..1" />
+          <End Role="Measurements" Type="Self.Measurements" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orders">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Measurements">
+              <PropertyRef Name="order_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Measurements_1_0">
+          <End Role="Parameters" Type="Self.Parameters" Multiplicity="0..1" />
+          <End Role="Measurements" Type="Self.Measurements" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Parameters">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Measurements">
+              <PropertyRef Name="param_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Recomendations_0_0">
+          <End Role="Reasons" Type="Self.Reasons" Multiplicity="0..1" />
+          <End Role="Recomendations" Type="Self.Recomendations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Reasons">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="Recomendations">
+              <PropertyRef Name="reason_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DataMiningEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Depending_parametres" EntityType="Self.Depending_parametres" />
+          <EntitySet Name="Emergency_situations" EntityType="Self.Emergency_situations" />
+          <EntitySet Name="Materials" EntityType="Self.Materials" />
+          <EntitySet Name="Measurements" EntityType="Self.Measurements" />
+          <EntitySet Name="Orders" EntityType="Self.Orders" />
+          <EntitySet Name="Parameters" EntityType="Self.Parameters" />
+          <EntitySet Name="Reasons" EntityType="Self.Reasons" />
+          <EntitySet Name="Recomendations" EntityType="Self.Recomendations" />
+          <AssociationSet Name="FK_Depending_parametres_0_0" Association="Self.FK_Depending_parametres_0_0">
+            <End Role="Parameters" EntitySet="Parameters" />
+            <End Role="Depending_parametres" EntitySet="Depending_parametres" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Depending_parametres_1_0" Association="Self.FK_Depending_parametres_1_0">
+            <End Role="Reasons" EntitySet="Reasons" />
+            <End Role="Depending_parametres" EntitySet="Depending_parametres" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Reasons_0_0" Association="Self.FK_Reasons_0_0">
+            <End Role="Emergency_situations" EntitySet="Emergency_situations" />
+            <End Role="Reasons" EntitySet="Reasons" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Materials_0_0" Association="Self.FK_Materials_0_0">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="Materials" EntitySet="Materials" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Measurements_0_0" Association="Self.FK_Measurements_0_0">
+            <End Role="Orders" EntitySet="Orders" />
+            <End Role="Measurements" EntitySet="Measurements" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Measurements_1_0" Association="Self.FK_Measurements_1_0">
+            <End Role="Parameters" EntitySet="Parameters" />
+            <End Role="Measurements" EntitySet="Measurements" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Recomendations_0_0" Association="Self.FK_Recomendations_0_0">
+            <End Role="Reasons" EntitySet="Reasons" />
+            <End Role="Recomendations" EntitySet="Recomendations" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище DataMiningModelContainer" CdmEntityContainer="DataMiningEntities">
+          <EntitySetMapping Name="Depending_parametres">
+            <EntityTypeMapping TypeName="DataMiningModel.Depending_parametres">
+              <MappingFragment StoreEntitySet="Depending_parametres">
+                <ScalarProperty Name="reasonparam_id" ColumnName="reasonparam_id" />
+                <ScalarProperty Name="parameter_id" ColumnName="parameter_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Emergency_situations">
+            <EntityTypeMapping TypeName="DataMiningModel.Emergency_situations">
+              <MappingFragment StoreEntitySet="Emergency_situations">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="number_st" ColumnName="number_st" />
+                <ScalarProperty Name="name_st" ColumnName="name_st" />
+                <ScalarProperty Name="place_st" ColumnName="place_st" />
+                <ScalarProperty Name="paramcritmin_re" ColumnName="paramcritmin_re" />
+                <ScalarProperty Name="paramcritmax_re" ColumnName="paramcritmax_re" />
+                <ScalarProperty Name="optimum_re" ColumnName="optimum_re" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Materials">
+            <EntityTypeMapping TypeName="DataMiningModel.Materials">
+              <MappingFragment StoreEntitySet="Materials">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name_st" ColumnName="name_st" />
+                <ScalarProperty Name="order_id" ColumnName="order_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Measurements">
+            <EntityTypeMapping TypeName="DataMiningModel.Measurements">
+              <MappingFragment StoreEntitySet="Measurements">
+                <ScalarProperty Name="param_id" ColumnName="param_id" />
+                <ScalarProperty Name="order_id" ColumnName="order_id" />
+                <ScalarProperty Name="time_st" ColumnName="time_st" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="value" ColumnName="value" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="DataMiningModel.Orders">
+              <MappingFragment StoreEntitySet="Orders">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name_st" ColumnName="name_st" />
+                <ScalarProperty Name="date_st" ColumnName="date_st" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Parameters">
+            <EntityTypeMapping TypeName="DataMiningModel.Parameters">
+              <MappingFragment StoreEntitySet="Parameters">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name_st" ColumnName="name_st" />
+                <ScalarProperty Name="translateru_st" ColumnName="translateru_st" />
+                <ScalarProperty Name="translateen_st" ColumnName="translateen_st" />
+                <ScalarProperty Name="upperLimitPercent" ColumnName="upperLimitPercent" />
+                <ScalarProperty Name="lowerLimitPercent" ColumnName="lowerLimitPercent" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Reasons">
+            <EntityTypeMapping TypeName="DataMiningModel.Reasons">
+              <MappingFragment StoreEntitySet="Reasons">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ES_id" ColumnName="ES_id" />
+                <ScalarProperty Name="text_st" ColumnName="text_st" />
+                <ScalarProperty Name="reasonnumber_in" ColumnName="reasonnumber_in" />
+                <ScalarProperty Name="place_st" ColumnName="place_st" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Recomendations">
+            <EntityTypeMapping TypeName="DataMiningModel.Recomendations">
+              <MappingFragment StoreEntitySet="Recomendations">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="reason_id" ColumnName="reason_id" />
+                <ScalarProperty Name="number_in" ColumnName="number_in" />
+                <ScalarProperty Name="text_st" ColumnName="text_st" />
+                <ScalarProperty Name="param_st" ColumnName="param_st" />
+                <ScalarProperty Name="place_st" ColumnName="place_st" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

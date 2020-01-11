@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataMiningDataSet" targetNamespace="http://tempuri.org/DataMiningDataSet.xsd" xmlns:mstns="http://tempuri.org/DataMiningDataSet.xsd" xmlns="http://tempuri.org/DataMiningDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DataMiningConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DataMiningConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DataMiningOffLine.Properties.Settings.GlobalReference.Default.DataMiningConnectionString" Provider="System.Data.SQLite.EF6" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ParametersTableAdapter" GeneratorDataComponentClassName="ParametersTableAdapter" Name="Parameters" UserDataComponentName="ParametersTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DataMiningConnectionString (Settings)" DbObjectName="main.Parameters" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [name_st], [translateru_st], [translateen_st], [upperLimitPercent], [lowerLimitPercent] FROM [Parameters]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="name_st" DataSetColumn="name_st" />
+              <Mapping SourceColumn="translateru_st" DataSetColumn="translateru_st" />
+              <Mapping SourceColumn="translateen_st" DataSetColumn="translateen_st" />
+              <Mapping SourceColumn="upperLimitPercent" DataSetColumn="upperLimitPercent" />
+              <Mapping SourceColumn="lowerLimitPercent" DataSetColumn="lowerLimitPercent" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataMiningDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DataMiningDataSet" msprop:Generator_UserDSName="DataMiningDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Parameters" msprop:Generator_TableClassName="ParametersDataTable" msprop:Generator_TableVarName="tableParameters" msprop:Generator_TablePropName="Parameters" msprop:Generator_RowDeletingName="ParametersRowDeleting" msprop:Generator_RowChangingName="ParametersRowChanging" msprop:Generator_RowEvHandlerName="ParametersRowChangeEventHandler" msprop:Generator_RowDeletedName="ParametersRowDeleted" msprop:Generator_UserTableName="Parameters" msprop:Generator_RowChangedName="ParametersRowChanged" msprop:Generator_RowEvArgName="ParametersRowChangeEvent" msprop:Generator_RowClassName="ParametersRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name_st" msprop:Generator_ColumnVarNameInTable="columnname_st" msprop:Generator_ColumnPropNameInRow="name_st" msprop:Generator_ColumnPropNameInTable="name_stColumn" msprop:Generator_UserColumnName="name_st" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="translateru_st" msprop:Generator_ColumnVarNameInTable="columntranslateru_st" msprop:Generator_ColumnPropNameInRow="translateru_st" msprop:Generator_ColumnPropNameInTable="translateru_stColumn" msprop:Generator_UserColumnName="translateru_st" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="translateen_st" msprop:Generator_ColumnVarNameInTable="columntranslateen_st" msprop:Generator_ColumnPropNameInRow="translateen_st" msprop:Generator_ColumnPropNameInTable="translateen_stColumn" msprop:Generator_UserColumnName="translateen_st" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="upperLimitPercent" msprop:Generator_ColumnVarNameInTable="columnupperLimitPercent" msprop:Generator_ColumnPropNameInRow="upperLimitPercent" msprop:Generator_ColumnPropNameInTable="upperLimitPercentColumn" msprop:Generator_UserColumnName="upperLimitPercent" type="xs:long" minOccurs="0" />
+              <xs:element name="lowerLimitPercent" msprop:Generator_ColumnVarNameInTable="columnlowerLimitPercent" msprop:Generator_ColumnPropNameInRow="lowerLimitPercent" msprop:Generator_ColumnPropNameInTable="lowerLimitPercentColumn" msprop:Generator_UserColumnName="lowerLimitPercent" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

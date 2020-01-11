@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter index="2" scadaName="Defects.Roll10Sqm.DefMap0" ruName="Гелики" enName="Gels" />
+  <parameter index="3" scadaName="Defects.Roll10Sqm.DefMap1" ruName="Черные точки" enName="Black Point" />
+  <parameter index="4" scadaName="Defects.Roll10Sqm.DefMap2" ruName="Воздушные включения" enName="Air Marks" />
+  <parameter index="5" scadaName="Defects.Roll10Sqm.DefMap3" ruName="Волокна" enName="Fiber" />
+  <parameter index="6" scadaName="Defects.Roll10Sqm.DefMap4" ruName="Дыра" enName="Hole" />
+  <parameter index="7" scadaName="Defects.Roll10Sqm.DefMap5" ruName="Дефект &gt; 15мм²" enName="Defect &gt; 15mm²" />
+  <parameter index="8" scadaName="Defects.Roll10Sqm.DefMap6" ruName="Деструкционные полосы" enName="Burning Stripe" />
+  <parameter index="9" scadaName="Defects.Roll10Sqm.DefMap7" ruName="Дефект7" enName="Defect7" />
+  <parameter index="10" scadaName="Defects.Roll10Sqm.DefMap8" ruName="Дефект8" enName="Defect8" />
+  <parameter index="11" scadaName="Defects.Roll10Sqm.DefMap9" ruName="Дефект9" enName="Defect9" />
+  <parameter index="12" scadaName="Defects.Roll10Sqm.DefMap10" ruName="Дефект10" enName="Defect10" />
+  <parameter index="13" scadaName="Defects.Roll10Sqm.DefMap11" ruName="Дефект11" enName="Defect11" />
+  <parameter index="14" scadaName="Defects.Roll10Sqm.DefMap12" ruName="Дефект12" enName="Defect12" />
+  <parameter index="15" scadaName="Defects.Roll10Sqm.DefMap13" ruName="Дефект13" enName="Defect13" />
+  <parameter index="16" scadaName="Defects.Roll10Sqm.DefMap14" ruName="Дефект14" enName="Defect14" />
+  <parameter index="17" scadaName="Defects.Roll10Sqm.DefMap15" ruName="Дефект15" enName="Defect15" />
+  <parameter index="18" scadaName="Defects.Roll10Sqm.DefMap16" ruName="Дефект16" enName="Defect16" />
+  <parameter index="19" scadaName="Defects.Roll10Sqm.DefMap17" ruName="Дефект17" enName="Defect17" />
+  <parameter index="20" scadaName="Defects.Roll10Sqm.DefMap18" ruName="Дефект18" enName="Defect18" />
+  <parameter index="21" scadaName="Defects.Roll10Sqm.DefMap19" ruName="Дефект19" enName="Defect19" />
+  <parameter index="45" scadaName="OPC_I_voronka_K02" ruName="Воронка - Нагрузка" enName="Funnel - Force" />
+  <parameter index="46" scadaName="OPC_V_voronka_K02" ruName="Воронка - Скорость" enName="Funnel - Speed" />
+  <parameter index="47" scadaName="OPC_IA_shnek_K02" ruName="Шнек - Нагрузка" enName="Screw - Force" />
+  <parameter index="48" scadaName="OPC_V_shnek_K02" ruName="Шнек - Скорость" enName="Screw - Speed" />
+  <parameter index="49" scadaName="OPC_W1_XI_K02" ruName="Каландровый вал № 1 - Нагрузка" enName="Calender Roll 1 - Force" />
+  <parameter index="50" scadaName="OPC_W1_XT_K02" ruName="Каландровый вал № 1 - Температура" enName="Calender Roll 1 - Temperature" />
+  <parameter index="51" scadaName="OPC_W1_XV_K02" ruName="Каландровый вал № 1 - Скорость" enName="Calender Roll 1 - Speed" />
+  <parameter index="52" scadaName="OPC_W2_XI_K02" ruName="Каландровый вал № 2 - Нагрузка" enName="Calender Roll 2 - Force" />
+  <parameter index="53" scadaName="OPC_W2_XT_K02" ruName="Каландровый вал № 2 - Температура" enName="Calender Roll 2 - Temperature" />
+  <parameter index="54" scadaName="OPC_W2_XV_K02" ruName="Каландровый вал № 2 - Скорость" enName="Calender Roll 2 - Speed" />
+  <parameter index="55" scadaName="OPC_W3_XI_K02" ruName="Каландровый вал № 3 - Нагрузка" enName="Calender Roll 3 - Force" />
+  <parameter index="56" scadaName="OPC_W3_XT_K02" ruName="Каландровый вал № 3 - Температура" enName="Calender Roll 3 - Temperature" />
+  <parameter index="57" scadaName="OPC_W3_XV_K02" ruName="Каландровый вал № 3 - Скорость" enName="Calender Roll 3 - Speed" />
+  <parameter index="58" scadaName="OPC_W4_XI_K02" ruName="Каландровый вал № 4 - Нагрузка" enName="Calender Roll 4 - Force" />
+  <parameter index="59" scadaName="OPC_W4_XT_K02" ruName="Каландровый вал № 4 - Температура" enName="Calender Roll 4 - Temperature" />
+  <parameter index="60" scadaName="OPC_W4_XV_K02" ruName="Каландровый вал № 4 - Скорость" enName="Calender Roll 4 - Speed" />
+  <parameter index="61" scadaName="OPC_HB_XV_K02" ruName="OPC_HB_XV_K02" enName="OPC_HB_XV_K02" />
+  <parameter index="62" scadaName="OPC_KLW_XV_K02" ruName="OPC_KLW_XV_K02" enName="OPC_KLW_XV_K02" />
+  <parameter index="63" scadaName="OPC_WP85_RBW4GS_R_K02" ruName="Каландровый вал № 4 - Контр изгиб GS" enName="Calender Roll 4 - Roll bending GS" />
+  <parameter index="64" scadaName="OPC_WP85_RBW4HS_R_K02" ruName="Каландровый вал № 4 - Контр изгиб HS" enName="Calender Roll 4 - Roll bending HS" />
+  <parameter index="65" scadaName="OPC_ABZ12_XI_K02" ruName="Съемный вал № 1-2 - Нагрузка" enName="Take-off rolls 1-2 - Force" />
+  <parameter index="66" scadaName="OPC_ABZ12_XT_K02" ruName="Съемный вал № 1-2 - Температура" enName="Take-off rolls 1-2 - Temperature" />
+  <parameter index="67" scadaName="OPC_ABZ12_XV_K02" ruName="Съемный вал № 1-2 - Скорость" enName="Take-off rolls 1-2 - Speed" />
+  <parameter index="68" scadaName="OPC_ABZ36_XI_K02" ruName="Съемный вал № 3-6 - Нагрузка" enName="Take-off rolls 3-6 - Force" />
+  <parameter index="69" scadaName="OPC_ABZ36_XT_K02" ruName="Съемный вал № 3-6 - Температура" enName="Take-off rolls 3-6 - Temperature" />
+  <parameter index="70" scadaName="OPC_ABZ36_XV_K02" ruName="Съемный вал № 3-6 - Скорость" enName="Take-off rolls 3-6 - Speed" />
+  <parameter index="71" scadaName="OPC_ABZ710_XI_K02" ruName="Съемный вал № 7-10 - Нагрузка" enName="Take-off rolls 7-10 - Force" />
+  <parameter index="72" scadaName="OPC_ABZ710_XT_K02" ruName="Съемный вал № 7-10 - Температура" enName="Take-off rolls 7-10 - Temperature" />
+  <parameter index="73" scadaName="OPC_ABZ710_XV_K02" ruName="Съемный вал № 7-10 - Скорость" enName="Take-off rolls 7-10 - Speed" />
+  <parameter index="74" scadaName="OPC_TW12_XI_K02" ruName="Темперирующий вал № 1-2 - Нагрузка" enName="Tempering rolls 1-2 - Force" />
+  <parameter index="75" scadaName="OPC_TW12_XV_K02" ruName="Темперирующий вал № 1-2 - Скорость" enName="Tempering rolls 1-2 - Speed" />
+  <parameter index="76" scadaName="OPC_TW13_XT_K02" ruName="Темперирующий вал № 1-3 - Температура" enName="Tempering rolls 1-3 - Temperature" />
+  <parameter index="77" scadaName="OPC_TW3_XI_K02" ruName="Темперирующий вал № 3 - Нагрузка" enName="Tempering rolls 3 - Force" />
+  <parameter index="78" scadaName="OPC_TW3_XV_K02" ruName="Темперирующий вал № 3 - Скорость" enName="Tempering rolls 3 - Speed" />
+  <parameter index="79" scadaName="OPC_TW47_XI_K02" ruName="Темперирующий вал № 4-7 - Нагрузка" enName="Tempering rolls 4-7 - Force" />
+  <parameter index="80" scadaName="OPC_TW47_XT_K02" ruName="Темперирующий вал № 4-7 - Температура" enName="Tempering rolls 4-7 - Temperature" />
+  <parameter index="81" scadaName="OPC_TW47_XV_K02" ruName="Темперирующий вал № 4-7 - Скорость" enName="Tempering rolls 4-7 - Speed" />
+  <parameter index="82" scadaName="OPC_TW811_XI_K02" ruName="Темперирующий вал № 8-11 - Нагрузка" enName="Tempering rolls 8-11 - Force" />
+  <parameter index="83" scadaName="OPC_TW811_XT_K02" ruName="Темперирующий вал № 8-11 - Температура" enName="Tempering rolls 8-11 - Temperature" />
+  <parameter index="84" scadaName="OPC_TW811_XV_K02" ruName="Темперирующий вал № 8-11 - Скорость" enName="Tempering rolls 8-11 - Speed" />
+  <parameter index="85" scadaName="OPC_TW1215_XI_K02" ruName="Темперирующий вал № 12-15 - Нагрузка" enName="Tempering rolls 12-15 - Force" />
+  <parameter index="86" scadaName="OPC_TW1215_XT_K02" ruName="Темперирующий вал № 12-15 - Температура" enName="Tempering rolls 12-15 - Temperature" />
+  <parameter index="87" scadaName="OPC_TW1215_XV_K02" ruName="Темперирующий вал № 12-15 - Скорость" enName="Tempering rolls 12-15 - Speed" />
+  <parameter index="88" scadaName="OPC_ASZ1_XI_K02" ruName="Намотка № 1 - Нагрузка" enName="Winder 1 - Force" />
+  <parameter index="89" scadaName="OPC_ASZ1_XV_K02" ruName="Намотка № 1 - Скорость" enName="Winder 1 - Speed" />
+  <parameter index="90" scadaName="OPC_ASZ2_XI_K02" ruName="Намотка № 2 - Нагрузка" enName="Winder 2 - Force" />
+  <parameter index="91" scadaName="OPC_ASZ2_XV_K02" ruName="Намотка № 2 - Скорость" enName="Winder 2 - Speed" />
+  <parameter index="92" scadaName="OPC_XI51_P1_K02" ruName="OPC_XI51_P1_K02" enName="OPC_XI51_P1_K02" />
+  <parameter index="93" scadaName="OPC_XI51_P2_K02" ruName="OPC_XI51_P2_K02" enName="OPC_XI51_P2_K02" />
+  <parameter index="94" scadaName="OPC_XT51_K02" ruName="OPC_XT51_K02" enName="OPC_XT51_K02" />
+  <parameter index="95" scadaName="OPC_XI52_KALW_K02" ruName="OPC_XI52_KALW_K02" enName="OPC_XI52_KALW_K02" />
+  <parameter index="2" scadaName="DefMap0" ruName="DefMap0" enName="DefMap0" />
+  <parameter index="3" scadaName="DefMap1" ruName="DefMap1" enName="DefMap1" />
+  <parameter index="4" scadaName="DefMap2" ruName="DefMap2" enName="DefMap2" />
+  <parameter index="5" scadaName="DefMap3" ruName="DefMap3" enName="DefMap3" />
+  <parameter index="6" scadaName="DefMap4" ruName="DefMap4" enName="DefMap4" />
+  <parameter index="7" scadaName="DefMap5" ruName="DefMap5" enName="DefMap5" />
+  <parameter index="8" scadaName="DefMap6" ruName="DefMap6" enName="DefMap6" />
+  <parameter index="9" scadaName="DefMap7" ruName="DefMap7" enName="DefMap7" />
+  <parameter index="10" scadaName="DefMap8" ruName="DefMap8" enName="DefMap8" />
+  <parameter index="11" scadaName="DefMap9" ruName="DefMap9" enName="DefMap9" />
+  <parameter index="44" scadaName="WebSpeed" ruName="WebSpeed" enName="WebSpeed" />
+  <parameter index="12" scadaName="DefMap10" ruName="DefMap10" enName="DefMap10" />
+  <parameter index="13" scadaName="DefMap11" ruName="DefMap11" enName="DefMap11" />
+  <parameter index="14" scadaName="DefMap12" ruName="DefMap12" enName="DefMap12" />
+  <parameter index="15" scadaName="DefMap13" ruName="DefMap13" enName="DefMap13" />
+  <parameter index="16" scadaName="DefMap14" ruName="DefMap14" enName="DefMap14" />
+  <parameter index="17" scadaName="DefMap15" ruName="DefMap15" enName="DefMap15" />
+  <parameter index="18" scadaName="DefMap16" ruName="DefMap16" enName="DefMap16" />
+  <parameter index="19" scadaName="DefMap17" ruName="DefMap17" enName="DefMap17" />
+  <parameter index="20" scadaName="DefMap18" ruName="DefMap18" enName="DefMap18" />
+  <parameter index="21" scadaName="DefMap19" ruName="DefMap19" enName="DefMap19" />
+  <parameter index="41" scadaName="RelTransparency" ruName="RelTransparency" enName="RelTransparency" />
+  <parameter index="42" scadaName="AbsTransparency" ruName="AbsTransparency" enName="AbsTransparency" />
+  <parameter index="43" scadaName="Noise" ruName="Noise" enName="Noise" />
+  <parameter index="45" scadaName="EX_DRM_ANTR_ST1_IW" ruName="EX_DRM_ANTR_ST1_IW" enName="EX_DRM_ANTR_ST1_IW" />
+  <parameter index="46" scadaName="EX_DRM_ANTR_ST2_IW" ruName="EX_DRM_ANTR_ST2_IW" enName="EX_DRM_ANTR_ST2_IW" />
+  <parameter index="47" scadaName="EX_DRM_TRICHTER_IW" ruName="EX_DRM_TRICHTER_IW" enName="EX_DRM_TRICHTER_IW" />
+  <parameter index="48" scadaName="EX_DRZ_ANTR_ST1_BW" ruName="EX_DRZ_ANTR_ST1_BW" enName="EX_DRZ_ANTR_ST1_BW" />
+  <parameter index="49" scadaName="EX_DRZ_ANTR_ST1_IW" ruName="EX_DRZ_ANTR_ST1_IW" enName="EX_DRZ_ANTR_ST1_IW" />
+  <parameter index="50" scadaName="EX_DRZ_ANTR_ST2_BW" ruName="EX_DRZ_ANTR_ST2_BW" enName="EX_DRZ_ANTR_ST2_BW" />
+  <parameter index="51" scadaName="EX_DRZ_ANTR_ST2_IW" ruName="EX_DRZ_ANTR_ST2_IW" enName="EX_DRZ_ANTR_ST2_IW" />
+  <parameter index="52" scadaName="EX_DRZ_FUELL_W1_BW" ruName="EX_DRZ_FUELL_W1_BW" enName="EX_DRZ_FUELL_W1_BW" />
+  <parameter index="53" scadaName="EX_DRZ_SCHWENKB_BW" ruName="EX_DRZ_SCHWENKB_BW" enName="EX_DRZ_SCHWENKB_BW" />
+  <parameter index="54" scadaName="EX_DRZ_SCHWENKB_IW" ruName="EX_DRZ_SCHWENKB_IW" enName="EX_DRZ_SCHWENKB_IW" />
+  <parameter index="55" scadaName="EX_DRZ_TRICHTER_BW" ruName="EX_DRZ_TRICHTER_BW" enName="EX_DRZ_TRICHTER_BW" />
+  <parameter index="56" scadaName="EX_DRZ_TRICHTER_IW" ruName="EX_DRZ_TRICHTER_IW" enName="EX_DRZ_TRICHTER_IW" />
+  <parameter index="57" scadaName="EX_HOEHE_SPALT_W1_BW" ruName="EX_HOEHE_SPALT_W1_BW" enName="EX_HOEHE_SPALT_W1_BW" />
+  <parameter index="58" scadaName="EX_POS_SCHWENKB_IW" ruName="EX_POS_SCHWENKB_IW" enName="EX_POS_SCHWENKB_IW" />
+  <parameter index="59" scadaName="EX_POS_SCHWENKB_BACK_GS_IW" ruName="EX_POS_SCHWENKB_BACK_GS_IW" enName="EX_POS_SCHWENKB_BACK_GS_IW" />
+  <parameter index="60" scadaName="EX_POS_SCHWENKB_BACK_HS_IW" ruName="EX_POS_SCHWENKB_BACK_HS_IW" enName="EX_POS_SCHWENKB_BACK_HS_IW" />
+  <parameter index="61" scadaName="EX_POS_SCHWENKB_STOP_GS_IW" ruName="EX_POS_SCHWENKB_STOP_GS_IW" enName="EX_POS_SCHWENKB_STOP_GS_IW" />
+  <parameter index="62" scadaName="EX_POS_SCHWENKB_STOP_HS_IW" ruName="EX_POS_SCHWENKB_STOP_HS_IW" enName="EX_POS_SCHWENKB_STOP_HS_IW" />
+  <parameter index="63" scadaName="EX_STELLW_MOMENTENREG_BW" ruName="EX_STELLW_MOMENTENREG_BW" enName="EX_STELLW_MOMENTENREG_BW" />
+  <parameter index="64" scadaName="EX_STELLW_SPIN_ST1_BW" ruName="EX_STELLW_SPIN_ST1_BW" enName="EX_STELLW_SPIN_ST1_BW" />
+  <parameter index="65" scadaName="EX_STELLW_SPIN_ST2_BW" ruName="EX_STELLW_SPIN_ST2_BW" enName="EX_STELLW_SPIN_ST2_BW" />
+  <parameter index="66" scadaName="EX_STELLW_ZYL_ST1_BW" ruName="EX_STELLW_ZYL_ST1_BW" enName="EX_STELLW_ZYL_ST1_BW" />
+  <parameter index="67" scadaName="EX_STELLW_ZYL_ST2_BW" ruName="EX_STELLW_ZYL_ST2_BW" enName="EX_STELLW_ZYL_ST2_BW" />
+  <parameter index="68" scadaName="EX_TEMP_SPIN_ST1_BW" ruName="EX_TEMP_SPIN_ST1_BW" enName="EX_TEMP_SPIN_ST1_BW" />
+  <parameter index="69" scadaName="EX_TEMP_SPIN_ST1_IW" ruName="EX_TEMP_SPIN_ST1_IW" enName="EX_TEMP_SPIN_ST1_IW" />
+  <parameter index="70" scadaName="EX_TEMP_SPIN_ST2_BW" ruName="EX_TEMP_SPIN_ST2_BW" enName="EX_TEMP_SPIN_ST2_BW" />
+  <parameter index="71" scadaName="EX_TEMP_SPIN_ST2_IW" ruName="EX_TEMP_SPIN_ST2_IW" enName="EX_TEMP_SPIN_ST2_IW" />
+  <parameter index="72" scadaName="EX_TEMP_ZYL_ST1_BW" ruName="EX_TEMP_ZYL_ST1_BW" enName="EX_TEMP_ZYL_ST1_BW" />
+  <parameter index="73" scadaName="EX_TEMP_ZYL_ST1_IW" ruName="EX_TEMP_ZYL_ST1_IW" enName="EX_TEMP_ZYL_ST1_IW" />
+  <parameter index="74" scadaName="EX_TEMP_ZYL_ST2_BW" ruName="EX_TEMP_ZYL_ST2_BW" enName="EX_TEMP_ZYL_ST2_BW" />
+  <parameter index="75" scadaName="EX_TEMP_ZYL_ST2_IW" ruName="EX_TEMP_ZYL_ST2_IW" enName="EX_TEMP_ZYL_ST2_IW" />
+  <parameter index="76" scadaName="EX_ZEIT_SCHWENKB_GS_IW" ruName="EX_ZEIT_SCHWENKB_GS_IW" enName="EX_ZEIT_SCHWENKB_GS_IW" />
+  <parameter index="77" scadaName="EX_ZEIT_SCHWENKB_HS_IW" ruName="EX_ZEIT_SCHWENKB_HS_IW" enName="EX_ZEIT_SCHWENKB_HS_IW" />
+  <parameter index="78" scadaName="KN_DRM_ANTRIEB_IW" ruName="KN_DRM_ANTRIEB_IW" enName="KN_DRM_ANTRIEB_IW" />
+  <parameter index="79" scadaName="KN_DRM_MESSER_IW" ruName="KN_DRM_MESSER_IW" enName="KN_DRM_MESSER_IW" />
+  <parameter index="80" scadaName="KN_DRM_TRICHTER_IW" ruName="KN_DRM_TRICHTER_IW" enName="KN_DRM_TRICHTER_IW" />
+  <parameter index="81" scadaName="KN_DRZ_ANTRIEB_BW" ruName="KN_DRZ_ANTRIEB_BW" enName="KN_DRZ_ANTRIEB_BW" />
+  <parameter index="82" scadaName="KN_DRZ_ANTRIEB_IW" ruName="KN_DRZ_ANTRIEB_IW" enName="KN_DRZ_ANTRIEB_IW" />
+  <parameter index="83" scadaName="KN_DRZ_FUELL_W1_BW" ruName="KN_DRZ_FUELL_W1_BW" enName="KN_DRZ_FUELL_W1_BW" />
+  <parameter index="84" scadaName="KN_DRZ_MESSER_BW" ruName="KN_DRZ_MESSER_BW" enName="KN_DRZ_MESSER_BW" />
+  <parameter index="85" scadaName="KN_DRZ_MESSER_IW" ruName="KN_DRZ_MESSER_IW" enName="KN_DRZ_MESSER_IW" />
+  <parameter index="86" scadaName="KN_DRZ_TRICHTER_BW" ruName="KN_DRZ_TRICHTER_BW" enName="KN_DRZ_TRICHTER_BW" />
+  <parameter index="87" scadaName="KN_DRZ_TRICHTER_IW" ruName="KN_DRZ_TRICHTER_IW" enName="KN_DRZ_TRICHTER_IW" />
+  <parameter index="88" scadaName="KN_HOEHE_SPALT_W1_BW" ruName="KN_HOEHE_SPALT_W1_BW" enName="KN_HOEHE_SPALT_W1_BW" />
+  <parameter index="89" scadaName="KN_MOMENTENREG_BW" ruName="KN_MOMENTENREG_BW" enName="KN_MOMENTENREG_BW" />
+  <parameter index="90" scadaName="KN_STELLW_HEIZZ_1_IW" ruName="KN_STELLW_HEIZZ_1_IW" enName="KN_STELLW_HEIZZ_1_IW" />
+  <parameter index="91" scadaName="KN_TEMP_HEIZZ_1_BW" ruName="KN_TEMP_HEIZZ_1_BW" enName="KN_TEMP_HEIZZ_1_BW" />
+  <parameter index="92" scadaName="KN_TEMP_HEIZZ_1_IW" ruName="KN_TEMP_HEIZZ_1_IW" enName="KN_TEMP_HEIZZ_1_IW" />
+  <parameter index="93" scadaName="KN_TEMP_MESSP_1_IW" ruName="KN_TEMP_MESSP_1_IW" enName="KN_TEMP_MESSP_1_IW" />
+  <parameter index="94" scadaName="KN_TEMP_MESSP_2_IW" ruName="KN_TEMP_MESSP_2_IW" enName="KN_TEMP_MESSP_2_IW" />
+  <parameter index="95" scadaName="KN_TEMP_MESSP_3_IW" ruName="KN_TEMP_MESSP_3_IW" enName="KN_TEMP_MESSP_3_IW" />
+  <parameter index="96" scadaName="WI_AKT_DURCHM_W1_IW" ruName="WI_AKT_DURCHM_W1_IW" enName="WI_AKT_DURCHM_W1_IW" />
+  <parameter index="97" scadaName="WI_AKT_DURCHM_W2_IW" ruName="WI_AKT_DURCHM_W2_IW" enName="WI_AKT_DURCHM_W2_IW" />
+  <parameter index="98" scadaName="WI_CHAR_W1_BW" ruName="WI_CHAR_W1_BW" enName="WI_CHAR_W1_BW" />
+  <parameter index="99" scadaName="WI_CHAR_W2_BW" ruName="WI_CHAR_W2_BW" enName="WI_CHAR_W2_BW" />
+  <parameter index="100" scadaName="WI_DRK_ANF_ZUG_W1_BW" ruName="WI_DRK_ANF_ZUG_W1_BW" enName="WI_DRK_ANF_ZUG_W1_BW" />
+  <parameter index="101" scadaName="WI_DRK_ANF_ZUG_W1_IW" ruName="WI_DRK_ANF_ZUG_W1_IW" enName="WI_DRK_ANF_ZUG_W1_IW" />
+  <parameter index="102" scadaName="WI_DRK_ANF_ZUG_W2_BW" ruName="WI_DRK_ANF_ZUG_W2_BW" enName="WI_DRK_ANF_ZUG_W2_BW" />
+  <parameter index="103" scadaName="WI_DRK_ANF_ZUG_W2_IW" ruName="WI_DRK_ANF_ZUG_W2_IW" enName="WI_DRK_ANF_ZUG_W2_IW" />
+  <parameter index="104" scadaName="WI_DRK_END_ZUG_W1_BW" ruName="WI_DRK_END_ZUG_W1_BW" enName="WI_DRK_END_ZUG_W1_BW" />
+  <parameter index="105" scadaName="WI_DRK_END_ZUG_W1_IW" ruName="WI_DRK_END_ZUG_W1_IW" enName="WI_DRK_END_ZUG_W1_IW" />
+  <parameter index="106" scadaName="WI_DRK_END_ZUG_W2_BW" ruName="WI_DRK_END_ZUG_W2_BW" enName="WI_DRK_END_ZUG_W2_BW" />
+  <parameter index="107" scadaName="WI_DRK_END_ZUG_W2_IW" ruName="WI_DRK_END_ZUG_W2_IW" enName="WI_DRK_END_ZUG_W2_IW" />
+  <parameter index="108" scadaName="WI_DRK_HUELS_SPANN_W1_BW" ruName="WI_DRK_HUELS_SPANN_W1_BW" enName="WI_DRK_HUELS_SPANN_W1_BW" />
+  <parameter index="109" scadaName="WI_DRK_HUELS_SPANN_W2_BW" ruName="WI_DRK_HUELS_SPANN_W2_BW" enName="WI_DRK_HUELS_SPANN_W2_BW" />
+  <parameter index="110" scadaName="WI_DRK_KONTAKTWALZE_BW" ruName="WI_DRK_KONTAKTWALZE_BW" enName="WI_DRK_KONTAKTWALZE_BW" />
+  <parameter index="111" scadaName="WI_DRK_KONTAKTWALZE_SCH_BW" ruName="WI_DRK_KONTAKTWALZE_SCH_BW" enName="WI_DRK_KONTAKTWALZE_SCH_BW" />
+  <parameter index="112" scadaName="WI_DRK_KONTAKT_SCHLITTEN_BW" ruName="WI_DRK_KONTAKT_SCHLITTEN_BW" enName="WI_DRK_KONTAKT_SCHLITTEN_BW" />
+  <parameter index="113" scadaName="WI_DRK_LAGENDRK_W1_IW" ruName="WI_DRK_LAGENDRK_W1_IW" enName="WI_DRK_LAGENDRK_W1_IW" />
+  <parameter index="114" scadaName="WI_DRK_LAGENDRK_W2_IW" ruName="WI_DRK_LAGENDRK_W2_IW" enName="WI_DRK_LAGENDRK_W2_IW" />
+  <parameter index="115" scadaName="WI_DRK_LAGENKRAFT_W1_IW" ruName="WI_DRK_LAGENKRAFT_W1_IW" enName="WI_DRK_LAGENKRAFT_W1_IW" />
+  <parameter index="116" scadaName="WI_DRK_LAGENKRAFT_W2_IW" ruName="WI_DRK_LAGENKRAFT_W2_IW" enName="WI_DRK_LAGENKRAFT_W2_IW" />
+  <parameter index="117" scadaName="WI_DRK_SCH_STUFE_BW" ruName="WI_DRK_SCH_STUFE_BW" enName="WI_DRK_SCH_STUFE_BW" />
+  <parameter index="118" scadaName="WI_DRZ_AUSZUG_BW" ruName="WI_DRZ_AUSZUG_BW" enName="WI_DRZ_AUSZUG_BW" />
+  <parameter index="119" scadaName="WI_DRZ_AUSZUG_IW" ruName="WI_DRZ_AUSZUG_IW" enName="WI_DRZ_AUSZUG_IW" />
+  <parameter index="120" scadaName="WI_DURCHM_HUELS_W1_BW" ruName="WI_DURCHM_HUELS_W1_BW" enName="WI_DURCHM_HUELS_W1_BW" />
+  <parameter index="121" scadaName="WI_DURCHM_HUELS_W2_BW" ruName="WI_DURCHM_HUELS_W2_BW" enName="WI_DURCHM_HUELS_W2_BW" />
+  <parameter index="122" scadaName="WI_LL_WICKLER1_BW" ruName="WI_LL_WICKLER1_BW" enName="WI_LL_WICKLER1_BW" />
+  <parameter index="123" scadaName="WI_LL_WICKLER1_IW" ruName="WI_LL_WICKLER1_IW" enName="WI_LL_WICKLER1_IW" />
+  <parameter index="124" scadaName="WI_LL_WICKLER2_BW" ruName="WI_LL_WICKLER2_BW" enName="WI_LL_WICKLER2_BW" />
+  <parameter index="125" scadaName="WI_LL_WICKLER2_IW" ruName="WI_LL_WICKLER2_IW" enName="WI_LL_WICKLER2_IW" />
+  <parameter index="126" scadaName="WI_POS_MESSER_KL1_HS_IW" ruName="WI_POS_MESSER_KL1_HS_IW" enName="WI_POS_MESSER_KL1_HS_IW" />
+  <parameter index="127" scadaName="WI_POS_MESSER_KL4_GS_IW" ruName="WI_POS_MESSER_KL4_GS_IW" enName="WI_POS_MESSER_KL4_GS_IW" />
+  <parameter index="128" scadaName="WI_POS_SCH_MESSER1_BW" ruName="WI_POS_SCH_MESSER1_BW" enName="WI_POS_SCH_MESSER1_BW" />
+  <parameter index="129" scadaName="WI_POS_SCH_MESSER1_IW" ruName="WI_POS_SCH_MESSER1_IW" enName="WI_POS_SCH_MESSER1_IW" />
+  <parameter index="130" scadaName="WI_POS_SCH_MESSER2_BW" ruName="WI_POS_SCH_MESSER2_BW" enName="WI_POS_SCH_MESSER2_BW" />
+  <parameter index="131" scadaName="WI_POS_SCH_MESSER2_IW" ruName="WI_POS_SCH_MESSER2_IW" enName="WI_POS_SCH_MESSER2_IW" />
+  <parameter index="132" scadaName="WI_POS_SCH_MESSER3_BW" ruName="WI_POS_SCH_MESSER3_BW" enName="WI_POS_SCH_MESSER3_BW" />
+  <parameter index="133" scadaName="WI_POS_SCH_MESSER3_IW" ruName="WI_POS_SCH_MESSER3_IW" enName="WI_POS_SCH_MESSER3_IW" />
+  <parameter index="134" scadaName="WI_POS_SCH_MESSER4_BW" ruName="WI_POS_SCH_MESSER4_BW" enName="WI_POS_SCH_MESSER4_BW" />
+  <parameter index="135" scadaName="WI_POS_SCH_MESSER4_IW" ruName="WI_POS_SCH_MESSER4_IW" enName="WI_POS_SCH_MESSER4_IW" />
+  <parameter index="136" scadaName="WI_STROM_W1_IW" ruName="WI_STROM_W1_IW" enName="WI_STROM_W1_IW" />
+  <parameter index="137" scadaName="WI_STROM_W2_IW" ruName="WI_STROM_W2_IW" enName="WI_STROM_W2_IW" />
+  <parameter index="138" scadaName="WI_TEMP_MOTOR_W1_IW" ruName="WI_TEMP_MOTOR_W1_IW" enName="WI_TEMP_MOTOR_W1_IW" />
+  <parameter index="139" scadaName="WI_TEMP_MOTOR_W2_IW" ruName="WI_TEMP_MOTOR_W2_IW" enName="WI_TEMP_MOTOR_W2_IW" />
+  <parameter index="140" scadaName="WI_ZUG_MW1_GS_IW" ruName="WI_ZUG_MW1_GS_IW" enName="WI_ZUG_MW1_GS_IW" />
+  <parameter index="141" scadaName="WI_ZUG_MW1_HS_IW" ruName="WI_ZUG_MW1_HS_IW" enName="WI_ZUG_MW1_HS_IW" />
+  <parameter index="142" scadaName="WI_ZUG_MW1_HS_GS_BW" ruName="WI_ZUG_MW1_HS_GS_BW" enName="WI_ZUG_MW1_HS_GS_BW" />
+  <parameter index="143" scadaName="WI_ZUG_MW1_HS_GS_IW" ruName="WI_ZUG_MW1_HS_GS_IW" enName="WI_ZUG_MW1_HS_GS_IW" />
+  <parameter index="144" scadaName="HZ_DRK_DRK_PUMPE_BW" ruName="HZ_DRK_DRK_PUMPE_BW" enName="HZ_DRK_DRK_PUMPE_BW" />
+  <parameter index="145" scadaName="HZ_ISTW_DRK_STATION_IW" ruName="HZ_ISTW_DRK_STATION_IW" enName="HZ_ISTW_DRK_STATION_IW" />
+  <parameter index="146" scadaName="HZ_STELLW_ABZW_GR1_BW" ruName="HZ_STELLW_ABZW_GR1_BW" enName="HZ_STELLW_ABZW_GR1_BW" />
+  <parameter index="147" scadaName="HZ_STELLW_ABZW_GR2_BW" ruName="HZ_STELLW_ABZW_GR2_BW" enName="HZ_STELLW_ABZW_GR2_BW" />
+  <parameter index="148" scadaName="HZ_STELLW_ABZW_GR3_BW" ruName="HZ_STELLW_ABZW_GR3_BW" enName="HZ_STELLW_ABZW_GR3_BW" />
+  <parameter index="149" scadaName="HZ_STELLW_ABZW_GR4_BW" ruName="HZ_STELLW_ABZW_GR4_BW" enName="HZ_STELLW_ABZW_GR4_BW" />
+  <parameter index="150" scadaName="HZ_STELLW_ABZW_GR5_BW" ruName="HZ_STELLW_ABZW_GR5_BW" enName="HZ_STELLW_ABZW_GR5_BW" />
+  <parameter index="151" scadaName="HZ_STELLW_ABZW_GR6_BW" ruName="HZ_STELLW_ABZW_GR6_BW" enName="HZ_STELLW_ABZW_GR6_BW" />
+  <parameter index="152" scadaName="HZ_STELLW_ABZW_GR7_BW" ruName="HZ_STELLW_ABZW_GR7_BW" enName="HZ_STELLW_ABZW_GR7_BW" />
+  <parameter index="153" scadaName="HZ_STELLW_AUSZUG_WI_BW" ruName="HZ_STELLW_AUSZUG_WI_BW" enName="HZ_STELLW_AUSZUG_WI_BW" />
+  <parameter index="154" scadaName="HZ_STELLW_DRK_PUMPE_BW" ruName="HZ_STELLW_DRK_PUMPE_BW" enName="HZ_STELLW_DRK_PUMPE_BW" />
+  <parameter index="155" scadaName="HZ_STELLW_HALTEW_GR1_BW" ruName="HZ_STELLW_HALTEW_GR1_BW" enName="HZ_STELLW_HALTEW_GR1_BW" />
+  <parameter index="156" scadaName="HZ_STELLW_HALTEW_GR2_BW" ruName="HZ_STELLW_HALTEW_GR2_BW" enName="HZ_STELLW_HALTEW_GR2_BW" />
+  <parameter index="157" scadaName="HZ_STELLW_NKUEHLW_GR1_BW" ruName="HZ_STELLW_NKUEHLW_GR1_BW" enName="HZ_STELLW_NKUEHLW_GR1_BW" />
+  <parameter index="158" scadaName="HZ_STELLW_RECKW_GR1_BW" ruName="HZ_STELLW_RECKW_GR1_BW" enName="HZ_STELLW_RECKW_GR1_BW" />
+  <parameter index="159" scadaName="HZ_STELLW_RECKW_GR2_BW" ruName="HZ_STELLW_RECKW_GR2_BW" enName="HZ_STELLW_RECKW_GR2_BW" />
+  <parameter index="160" scadaName="HZ_STELLW_RECKW_GR3_BW" ruName="HZ_STELLW_RECKW_GR3_BW" enName="HZ_STELLW_RECKW_GR3_BW" />
+  <parameter index="161" scadaName="HZ_STELLW_RECKW_GR4_BW" ruName="HZ_STELLW_RECKW_GR4_BW" enName="HZ_STELLW_RECKW_GR4_BW" />
+  <parameter index="162" scadaName="HZ_STELLW_RECKW_GR5_BW" ruName="HZ_STELLW_RECKW_GR5_BW" enName="HZ_STELLW_RECKW_GR5_BW" />
+  <parameter index="163" scadaName="HZ_STELLW_TEMPERW_GR1_BW" ruName="HZ_STELLW_TEMPERW_GR1_BW" enName="HZ_STELLW_TEMPERW_GR1_BW" />
+  <parameter index="164" scadaName="HZ_STELLW_TEMPERW_GR2_BW" ruName="HZ_STELLW_TEMPERW_GR2_BW" enName="HZ_STELLW_TEMPERW_GR2_BW" />
+  <parameter index="165" scadaName="HZ_STELLW_W1_BW" ruName="HZ_STELLW_W1_BW" enName="HZ_STELLW_W1_BW" />
+  <parameter index="166" scadaName="HZ_STELLW_W2_BW" ruName="HZ_STELLW_W2_BW" enName="HZ_STELLW_W2_BW" />
+  <parameter index="167" scadaName="HZ_STELLW_W3_BW" ruName="HZ_STELLW_W3_BW" enName="HZ_STELLW_W3_BW" />
+  <parameter index="168" scadaName="HZ_STELLW_W4_BW" ruName="HZ_STELLW_W4_BW" enName="HZ_STELLW_W4_BW" />
+  <parameter index="169" scadaName="HZ_STELLW_ZUGW_GR1_BW" ruName="HZ_STELLW_ZUGW_GR1_BW" enName="HZ_STELLW_ZUGW_GR1_BW" />
+  <parameter index="170" scadaName="HZ_STELLW_ZUGW_GR2_BW" ruName="HZ_STELLW_ZUGW_GR2_BW" enName="HZ_STELLW_ZUGW_GR2_BW" />
+  <parameter index="171" scadaName="HZ_STELLW_ZUGW_GR3_BW" ruName="HZ_STELLW_ZUGW_GR3_BW" enName="HZ_STELLW_ZUGW_GR3_BW" />
+  <parameter index="172" scadaName="HZ_STROM_DRK_PUMPE_IW" ruName="HZ_STROM_DRK_PUMPE_IW" enName="HZ_STROM_DRK_PUMPE_IW" />
+  <parameter index="173" scadaName="HZ_STROM_W1_IW" ruName="HZ_STROM_W1_IW" enName="HZ_STROM_W1_IW" />
+  <parameter index="174" scadaName="HZ_STROM_W2_IW" ruName="HZ_STROM_W2_IW" enName="HZ_STROM_W2_IW" />
+  <parameter index="175" scadaName="HZ_STROM_W3_IW" ruName="HZ_STROM_W3_IW" enName="HZ_STROM_W3_IW" />
+  <parameter index="176" scadaName="HZ_STROM_W4_IW" ruName="HZ_STROM_W4_IW" enName="HZ_STROM_W4_IW" />
+  <parameter index="177" scadaName="HZ_TEMP_ABZW_GR1_BW" ruName="HZ_TEMP_ABZW_GR1_BW" enName="HZ_TEMP_ABZW_GR1_BW" />
+  <parameter index="178" scadaName="HZ_TEMP_ABZW_GR1_IW" ruName="HZ_TEMP_ABZW_GR1_IW" enName="HZ_TEMP_ABZW_GR1_IW" />
+  <parameter index="179" scadaName="HZ_TEMP_ABZW_GR2_BW" ruName="HZ_TEMP_ABZW_GR2_BW" enName="HZ_TEMP_ABZW_GR2_BW" />
+  <parameter index="180" scadaName="HZ_TEMP_ABZW_GR2_IW" ruName="HZ_TEMP_ABZW_GR2_IW" enName="HZ_TEMP_ABZW_GR2_IW" />
+  <parameter index="181" scadaName="HZ_TEMP_ABZW_GR3_BW" ruName="HZ_TEMP_ABZW_GR3_BW" enName="HZ_TEMP_ABZW_GR3_BW" />
+  <parameter index="182" scadaName="HZ_TEMP_ABZW_GR3_IW" ruName="HZ_TEMP_ABZW_GR3_IW" enName="HZ_TEMP_ABZW_GR3_IW" />
+  <parameter index="183" scadaName="HZ_TEMP_ABZW_GR4_BW" ruName="HZ_TEMP_ABZW_GR4_BW" enName="HZ_TEMP_ABZW_GR4_BW" />
+  <parameter index="184" scadaName="HZ_TEMP_ABZW_GR4_IW" ruName="HZ_TEMP_ABZW_GR4_IW" enName="HZ_TEMP_ABZW_GR4_IW" />
+  <parameter index="185" scadaName="HZ_TEMP_ABZW_GR5_BW" ruName="HZ_TEMP_ABZW_GR5_BW" enName="HZ_TEMP_ABZW_GR5_BW" />
+  <parameter index="186" scadaName="HZ_TEMP_ABZW_GR5_IW" ruName="HZ_TEMP_ABZW_GR5_IW" enName="HZ_TEMP_ABZW_GR5_IW" />
+  <parameter index="187" scadaName="HZ_TEMP_ABZW_GR6_BW" ruName="HZ_TEMP_ABZW_GR6_BW" enName="HZ_TEMP_ABZW_GR6_BW" />
+  <parameter index="188" scadaName="HZ_TEMP_ABZW_GR6_IW" ruName="HZ_TEMP_ABZW_GR6_IW" enName="HZ_TEMP_ABZW_GR6_IW" />
+  <parameter index="189" scadaName="HZ_TEMP_ABZW_GR7_BW" ruName="HZ_TEMP_ABZW_GR7_BW" enName="HZ_TEMP_ABZW_GR7_BW" />
+  <parameter index="190" scadaName="HZ_TEMP_ABZW_GR7_IW" ruName="HZ_TEMP_ABZW_GR7_IW" enName="HZ_TEMP_ABZW_GR7_IW" />
+  <parameter index="191" scadaName="HZ_TEMP_AUSZUG_WI_BW" ruName="HZ_TEMP_AUSZUG_WI_BW" enName="HZ_TEMP_AUSZUG_WI_BW" />
+  <parameter index="192" scadaName="HZ_TEMP_AUSZUG_WI_IW" ruName="HZ_TEMP_AUSZUG_WI_IW" enName="HZ_TEMP_AUSZUG_WI_IW" />
+  <parameter index="193" scadaName="HZ_TEMP_HALTEW_GR1_BW" ruName="HZ_TEMP_HALTEW_GR1_BW" enName="HZ_TEMP_HALTEW_GR1_BW" />
+  <parameter index="194" scadaName="HZ_TEMP_HALTEW_GR1_IW" ruName="HZ_TEMP_HALTEW_GR1_IW" enName="HZ_TEMP_HALTEW_GR1_IW" />
+  <parameter index="195" scadaName="HZ_TEMP_HALTEW_GR2_BW" ruName="HZ_TEMP_HALTEW_GR2_BW" enName="HZ_TEMP_HALTEW_GR2_BW" />
+  <parameter index="196" scadaName="HZ_TEMP_HALTEW_GR2_IW" ruName="HZ_TEMP_HALTEW_GR2_IW" enName="HZ_TEMP_HALTEW_GR2_IW" />
+  <parameter index="197" scadaName="HZ_TEMP_NKUEHLW_GR1_BW" ruName="HZ_TEMP_NKUEHLW_GR1_BW" enName="HZ_TEMP_NKUEHLW_GR1_BW" />
+  <parameter index="198" scadaName="HZ_TEMP_NKUEHLW_GR1_IW" ruName="HZ_TEMP_NKUEHLW_GR1_IW" enName="HZ_TEMP_NKUEHLW_GR1_IW" />
+  <parameter index="199" scadaName="HZ_TEMP_RECKW_GR1_BW" ruName="HZ_TEMP_RECKW_GR1_BW" enName="HZ_TEMP_RECKW_GR1_BW" />
+  <parameter index="200" scadaName="HZ_TEMP_RECKW_GR1_IW" ruName="HZ_TEMP_RECKW_GR1_IW" enName="HZ_TEMP_RECKW_GR1_IW" />
+  <parameter index="201" scadaName="HZ_TEMP_RECKW_GR2_BW" ruName="HZ_TEMP_RECKW_GR2_BW" enName="HZ_TEMP_RECKW_GR2_BW" />
+  <parameter index="202" scadaName="HZ_TEMP_RECKW_GR2_IW" ruName="HZ_TEMP_RECKW_GR2_IW" enName="HZ_TEMP_RECKW_GR2_IW" />
+  <parameter index="203" scadaName="HZ_TEMP_RECKW_GR3_BW" ruName="HZ_TEMP_RECKW_GR3_BW" enName="HZ_TEMP_RECKW_GR3_BW" />
+  <parameter index="204" scadaName="HZ_TEMP_RECKW_GR3_IW" ruName="HZ_TEMP_RECKW_GR3_IW" enName="HZ_TEMP_RECKW_GR3_IW" />
+  <parameter index="205" scadaName="HZ_TEMP_RECKW_GR4_BW" ruName="HZ_TEMP_RECKW_GR4_BW" enName="HZ_TEMP_RECKW_GR4_BW" />
+  <parameter index="206" scadaName="HZ_TEMP_RECKW_GR4_IW" ruName="HZ_TEMP_RECKW_GR4_IW" enName="HZ_TEMP_RECKW_GR4_IW" />
+  <parameter index="207" scadaName="HZ_TEMP_RECKW_GR5_BW" ruName="HZ_TEMP_RECKW_GR5_BW" enName="HZ_TEMP_RECKW_GR5_BW" />
+  <parameter index="208" scadaName="HZ_TEMP_RECKW_GR5_IW" ruName="HZ_TEMP_RECKW_GR5_IW" enName="HZ_TEMP_RECKW_GR5_IW" />
+  <parameter index="209" scadaName="HZ_TEMP_TEMPERW_GR1_BW" ruName="HZ_TEMP_TEMPERW_GR1_BW" enName="HZ_TEMP_TEMPERW_GR1_BW" />
+  <parameter index="210" scadaName="HZ_TEMP_TEMPERW_GR1_IW" ruName="HZ_TEMP_TEMPERW_GR1_IW" enName="HZ_TEMP_TEMPERW_GR1_IW" />
+  <parameter index="211" scadaName="HZ_TEMP_TEMPERW_GR2_BW" ruName="HZ_TEMP_TEMPERW_GR2_BW" enName="HZ_TEMP_TEMPERW_GR2_BW" />
+  <parameter index="212" scadaName="HZ_TEMP_TEMPERW_GR2_IW" ruName="HZ_TEMP_TEMPERW_GR2_IW" enName="HZ_TEMP_TEMPERW_GR2_IW" />
+  <parameter index="213" scadaName="HZ_TEMP_W1_BW" ruName="HZ_TEMP_W1_BW" enName="HZ_TEMP_W1_BW" />
+  <parameter index="214" scadaName="HZ_TEMP_W1_IW" ruName="HZ_TEMP_W1_IW" enName="HZ_TEMP_W1_IW" />
+  <parameter index="215" scadaName="HZ_TEMP_W2_BW" ruName="HZ_TEMP_W2_BW" enName="HZ_TEMP_W2_BW" />
+  <parameter index="216" scadaName="HZ_TEMP_W2_IW" ruName="HZ_TEMP_W2_IW" enName="HZ_TEMP_W2_IW" />
+  <parameter index="217" scadaName="HZ_TEMP_W3_BW" ruName="HZ_TEMP_W3_BW" enName="HZ_TEMP_W3_BW" />
+  <parameter index="218" scadaName="HZ_TEMP_W3_IW" ruName="HZ_TEMP_W3_IW" enName="HZ_TEMP_W3_IW" />
+  <parameter index="219" scadaName="HZ_TEMP_W4_BW" ruName="HZ_TEMP_W4_BW" enName="HZ_TEMP_W4_BW" />
+  <parameter index="220" scadaName="HZ_TEMP_W4_IW" ruName="HZ_TEMP_W4_IW" enName="HZ_TEMP_W4_IW" />
+  <parameter index="221" scadaName="HZ_TEMP_ZUGW_GR1_BW" ruName="HZ_TEMP_ZUGW_GR1_BW" enName="HZ_TEMP_ZUGW_GR1_BW" />
+  <parameter index="222" scadaName="HZ_TEMP_ZUGW_GR1_IW" ruName="HZ_TEMP_ZUGW_GR1_IW" enName="HZ_TEMP_ZUGW_GR1_IW" />
+  <parameter index="223" scadaName="HZ_TEMP_ZUGW_GR2_BW" ruName="HZ_TEMP_ZUGW_GR2_BW" enName="HZ_TEMP_ZUGW_GR2_BW" />
+  <parameter index="224" scadaName="HZ_TEMP_ZUGW_GR2_IW" ruName="HZ_TEMP_ZUGW_GR2_IW" enName="HZ_TEMP_ZUGW_GR2_IW" />
+  <parameter index="225" scadaName="HZ_TEMP_ZUGW_GR3_BW" ruName="HZ_TEMP_ZUGW_GR3_BW" enName="HZ_TEMP_ZUGW_GR3_BW" />
+  <parameter index="226" scadaName="HZ_TEMP_ZUGW_GR3_IW" ruName="HZ_TEMP_ZUGW_GR3_IW" enName="HZ_TEMP_ZUGW_GR3_IW" />
+  <parameter index="227" scadaName="KAL_DICKE_DPA_GS_IW" ruName="KAL_DICKE_DPA_GS_IW" enName="KAL_DICKE_DPA_GS_IW" />
+  <parameter index="228" scadaName="KAL_DICKE_DPA_HS_IW" ruName="KAL_DICKE_DPA_HS_IW" enName="KAL_DICKE_DPA_HS_IW" />
+  <parameter index="229" scadaName="KAL_DICKE_DPA_MITTE_IW" ruName="KAL_DICKE_DPA_MITTE_IW" enName="KAL_DICKE_DPA_MITTE_IW" />
+  <parameter index="230" scadaName="KAL_DRK_BIEGE_W2_BW" ruName="KAL_DRK_BIEGE_W2_BW" enName="KAL_DRK_BIEGE_W2_BW" />
+  <parameter index="231" scadaName="KAL_DRK_BIEGE_W2_KK_IW" ruName="KAL_DRK_BIEGE_W2_KK_IW" enName="KAL_DRK_BIEGE_W2_KK_IW" />
+  <parameter index="232" scadaName="KAL_DRK_BIEGE_W2_KV_IW" ruName="KAL_DRK_BIEGE_W2_KV_IW" enName="KAL_DRK_BIEGE_W2_KV_IW" />
+  <parameter index="233" scadaName="KAL_DRK_BIEGE_W4_GS_BW" ruName="KAL_DRK_BIEGE_W4_GS_BW" enName="KAL_DRK_BIEGE_W4_GS_BW" />
+  <parameter index="234" scadaName="KAL_DRK_BIEGE_W4_GS_IW" ruName="KAL_DRK_BIEGE_W4_GS_IW" enName="KAL_DRK_BIEGE_W4_GS_IW" />
+  <parameter index="235" scadaName="KAL_DRK_BIEGE_W4_HS_BW" ruName="KAL_DRK_BIEGE_W4_HS_BW" enName="KAL_DRK_BIEGE_W4_HS_BW" />
+  <parameter index="236" scadaName="KAL_DRK_BIEGE_W4_HS_IW" ruName="KAL_DRK_BIEGE_W4_HS_IW" enName="KAL_DRK_BIEGE_W4_HS_IW" />
+  <parameter index="237" scadaName="KAL_DRK_SCH_WALZE2_BW" ruName="KAL_DRK_SCH_WALZE2_BW" enName="KAL_DRK_SCH_WALZE2_BW" />
+  <parameter index="238" scadaName="KAL_DRK_SCH_WALZE3_BW" ruName="KAL_DRK_SCH_WALZE3_BW" enName="KAL_DRK_SCH_WALZE3_BW" />
+  <parameter index="239" scadaName="KAL_DRK_VSPANN_W3_BW" ruName="KAL_DRK_VSPANN_W3_BW" enName="KAL_DRK_VSPANN_W3_BW" />
+  <parameter index="240" scadaName="KAL_DRK_VSPANN_W3_IW" ruName="KAL_DRK_VSPANN_W3_IW" enName="KAL_DRK_VSPANN_W3_IW" />
+  <parameter index="241" scadaName="KAL_DRM_ABZW_GR1_IW" ruName="KAL_DRM_ABZW_GR1_IW" enName="KAL_DRM_ABZW_GR1_IW" />
+  <parameter index="242" scadaName="KAL_DRM_ABZW_GR2_IW" ruName="KAL_DRM_ABZW_GR2_IW" enName="KAL_DRM_ABZW_GR2_IW" />
+  <parameter index="243" scadaName="KAL_DRM_ABZW_GR3_IW" ruName="KAL_DRM_ABZW_GR3_IW" enName="KAL_DRM_ABZW_GR3_IW" />
+  <parameter index="244" scadaName="KAL_DRM_ABZW_GR4_IW" ruName="KAL_DRM_ABZW_GR4_IW" enName="KAL_DRM_ABZW_GR4_IW" />
+  <parameter index="245" scadaName="KAL_DRM_ABZW_GR5_IW" ruName="KAL_DRM_ABZW_GR5_IW" enName="KAL_DRM_ABZW_GR5_IW" />
+  <parameter index="246" scadaName="KAL_DRM_ABZW_GR6_IW" ruName="KAL_DRM_ABZW_GR6_IW" enName="KAL_DRM_ABZW_GR6_IW" />
+  <parameter index="247" scadaName="KAL_DRM_ABZW_GR7_IW" ruName="KAL_DRM_ABZW_GR7_IW" enName="KAL_DRM_ABZW_GR7_IW" />
+  <parameter index="248" scadaName="KAL_DRM_HALTEW_GR1_IW" ruName="KAL_DRM_HALTEW_GR1_IW" enName="KAL_DRM_HALTEW_GR1_IW" />
+  <parameter index="249" scadaName="KAL_DRM_HALTEW_GR2_IW" ruName="KAL_DRM_HALTEW_GR2_IW" enName="KAL_DRM_HALTEW_GR2_IW" />
+  <parameter index="250" scadaName="KAL_DRM_HALTEW_GR3_IW" ruName="KAL_DRM_HALTEW_GR3_IW" enName="KAL_DRM_HALTEW_GR3_IW" />
+  <parameter index="251" scadaName="KAL_DRM_HB_GS_IW" ruName="KAL_DRM_HB_GS_IW" enName="KAL_DRM_HB_GS_IW" />
+  <parameter index="252" scadaName="KAL_DRM_HB_HS_IW" ruName="KAL_DRM_HB_HS_IW" enName="KAL_DRM_HB_HS_IW" />
+  <parameter index="253" scadaName="KAL_DRM_NKUEHLW_GR1_IW" ruName="KAL_DRM_NKUEHLW_GR1_IW" enName="KAL_DRM_NKUEHLW_GR1_IW" />
+  <parameter index="254" scadaName="KAL_DRM_TMPERW_GR1_IW" ruName="KAL_DRM_TMPERW_GR1_IW" enName="KAL_DRM_TMPERW_GR1_IW" />
+  <parameter index="255" scadaName="KAL_DRM_TMPERW_GR2_IW" ruName="KAL_DRM_TMPERW_GR2_IW" enName="KAL_DRM_TMPERW_GR2_IW" />
+  <parameter index="256" scadaName="KAL_DRM_W1_IW" ruName="KAL_DRM_W1_IW" enName="KAL_DRM_W1_IW" />
+  <parameter index="257" scadaName="KAL_DRM_W2_IW" ruName="KAL_DRM_W2_IW" enName="KAL_DRM_W2_IW" />
+  <parameter index="258" scadaName="KAL_DRM_W3_IW" ruName="KAL_DRM_W3_IW" enName="KAL_DRM_W3_IW" />
+  <parameter index="259" scadaName="KAL_DRM_W4_IW" ruName="KAL_DRM_W4_IW" enName="KAL_DRM_W4_IW" />
+  <parameter index="260" scadaName="KAL_DRM_ZUGW_GR1_IW" ruName="KAL_DRM_ZUGW_GR1_IW" enName="KAL_DRM_ZUGW_GR1_IW" />
+  <parameter index="261" scadaName="KAL_DRM_ZUGW_GR2_IW" ruName="KAL_DRM_ZUGW_GR2_IW" enName="KAL_DRM_ZUGW_GR2_IW" />
+  <parameter index="262" scadaName="KAL_DRM_ZUGW_GR3_IW" ruName="KAL_DRM_ZUGW_GR3_IW" enName="KAL_DRM_ZUGW_GR3_IW" />
+  <parameter index="263" scadaName="KAL_DRZ_ABZW_GR1_BW" ruName="KAL_DRZ_ABZW_GR1_BW" enName="KAL_DRZ_ABZW_GR1_BW" />
+  <parameter index="264" scadaName="KAL_DRZ_ABZW_GR1_IW" ruName="KAL_DRZ_ABZW_GR1_IW" enName="KAL_DRZ_ABZW_GR1_IW" />
+  <parameter index="265" scadaName="KAL_DRZ_ABZW_GR2_BW" ruName="KAL_DRZ_ABZW_GR2_BW" enName="KAL_DRZ_ABZW_GR2_BW" />
+  <parameter index="266" scadaName="KAL_DRZ_ABZW_GR2_IW" ruName="KAL_DRZ_ABZW_GR2_IW" enName="KAL_DRZ_ABZW_GR2_IW" />
+  <parameter index="267" scadaName="KAL_DRZ_ABZW_GR3_BW" ruName="KAL_DRZ_ABZW_GR3_BW" enName="KAL_DRZ_ABZW_GR3_BW" />
+  <parameter index="268" scadaName="KAL_DRZ_ABZW_GR3_IW" ruName="KAL_DRZ_ABZW_GR3_IW" enName="KAL_DRZ_ABZW_GR3_IW" />
+  <parameter index="269" scadaName="KAL_DRZ_ABZW_GR4_BW" ruName="KAL_DRZ_ABZW_GR4_BW" enName="KAL_DRZ_ABZW_GR4_BW" />
+  <parameter index="270" scadaName="KAL_DRZ_ABZW_GR4_IW" ruName="KAL_DRZ_ABZW_GR4_IW" enName="KAL_DRZ_ABZW_GR4_IW" />
+  <parameter index="271" scadaName="KAL_DRZ_ABZW_GR5_BW" ruName="KAL_DRZ_ABZW_GR5_BW" enName="KAL_DRZ_ABZW_GR5_BW" />
+  <parameter index="272" scadaName="KAL_DRZ_ABZW_GR5_IW" ruName="KAL_DRZ_ABZW_GR5_IW" enName="KAL_DRZ_ABZW_GR5_IW" />
+  <parameter index="273" scadaName="KAL_DRZ_ABZW_GR6_BW" ruName="KAL_DRZ_ABZW_GR6_BW" enName="KAL_DRZ_ABZW_GR6_BW" />
+  <parameter index="274" scadaName="KAL_DRZ_ABZW_GR6_IW" ruName="KAL_DRZ_ABZW_GR6_IW" enName="KAL_DRZ_ABZW_GR6_IW" />
+  <parameter index="275" scadaName="KAL_DRZ_ABZW_GR7_BW" ruName="KAL_DRZ_ABZW_GR7_BW" enName="KAL_DRZ_ABZW_GR7_BW" />
+  <parameter index="276" scadaName="KAL_DRZ_ABZW_GR7_IW" ruName="KAL_DRZ_ABZW_GR7_IW" enName="KAL_DRZ_ABZW_GR7_IW" />
+  <parameter index="277" scadaName="KAL_DRZ_HALTEW_GR1_BW" ruName="KAL_DRZ_HALTEW_GR1_BW" enName="KAL_DRZ_HALTEW_GR1_BW" />
+  <parameter index="278" scadaName="KAL_DRZ_HALTEW_GR1_IW" ruName="KAL_DRZ_HALTEW_GR1_IW" enName="KAL_DRZ_HALTEW_GR1_IW" />
+  <parameter index="279" scadaName="KAL_DRZ_HALTEW_GR2_BW" ruName="KAL_DRZ_HALTEW_GR2_BW" enName="KAL_DRZ_HALTEW_GR2_BW" />
+  <parameter index="280" scadaName="KAL_DRZ_HALTEW_GR2_IW" ruName="KAL_DRZ_HALTEW_GR2_IW" enName="KAL_DRZ_HALTEW_GR2_IW" />
+  <parameter index="281" scadaName="KAL_DRZ_HALTEW_GR3_BW" ruName="KAL_DRZ_HALTEW_GR3_BW" enName="KAL_DRZ_HALTEW_GR3_BW" />
+  <parameter index="282" scadaName="KAL_DRZ_HALTEW_GR3_IW" ruName="KAL_DRZ_HALTEW_GR3_IW" enName="KAL_DRZ_HALTEW_GR3_IW" />
+  <parameter index="283" scadaName="KAL_DRZ_HB_GS_BW" ruName="KAL_DRZ_HB_GS_BW" enName="KAL_DRZ_HB_GS_BW" />
+  <parameter index="284" scadaName="KAL_DRZ_HB_GS_IW" ruName="KAL_DRZ_HB_GS_IW" enName="KAL_DRZ_HB_GS_IW" />
+  <parameter index="285" scadaName="KAL_DRZ_HB_HS_BW" ruName="KAL_DRZ_HB_HS_BW" enName="KAL_DRZ_HB_HS_BW" />
+  <parameter index="286" scadaName="KAL_DRZ_HB_HS_IW" ruName="KAL_DRZ_HB_HS_IW" enName="KAL_DRZ_HB_HS_IW" />
+  <parameter index="287" scadaName="KAL_DRZ_NKUEHLW_GR1_BW" ruName="KAL_DRZ_NKUEHLW_GR1_BW" enName="KAL_DRZ_NKUEHLW_GR1_BW" />
+  <parameter index="288" scadaName="KAL_DRZ_NKUEHLW_GR1_IW" ruName="KAL_DRZ_NKUEHLW_GR1_IW" enName="KAL_DRZ_NKUEHLW_GR1_IW" />
+  <parameter index="289" scadaName="KAL_DRZ_RECKW_GR1_IW" ruName="KAL_DRZ_RECKW_GR1_IW" enName="KAL_DRZ_RECKW_GR1_IW" />
+  <parameter index="290" scadaName="KAL_DRZ_RECKW_GR10_IW" ruName="KAL_DRZ_RECKW_GR10_IW" enName="KAL_DRZ_RECKW_GR10_IW" />
+  <parameter index="291" scadaName="KAL_DRZ_RECKW_GR11_IW" ruName="KAL_DRZ_RECKW_GR11_IW" enName="KAL_DRZ_RECKW_GR11_IW" />
+  <parameter index="292" scadaName="KAL_DRZ_RECKW_GR12_IW" ruName="KAL_DRZ_RECKW_GR12_IW" enName="KAL_DRZ_RECKW_GR12_IW" />
+  <parameter index="293" scadaName="KAL_DRZ_RECKW_GR13_IW" ruName="KAL_DRZ_RECKW_GR13_IW" enName="KAL_DRZ_RECKW_GR13_IW" />
+  <parameter index="294" scadaName="KAL_DRZ_RECKW_GR2_IW" ruName="KAL_DRZ_RECKW_GR2_IW" enName="KAL_DRZ_RECKW_GR2_IW" />
+  <parameter index="295" scadaName="KAL_DRZ_RECKW_GR3_IW" ruName="KAL_DRZ_RECKW_GR3_IW" enName="KAL_DRZ_RECKW_GR3_IW" />
+  <parameter index="296" scadaName="KAL_DRZ_RECKW_GR4_IW" ruName="KAL_DRZ_RECKW_GR4_IW" enName="KAL_DRZ_RECKW_GR4_IW" />
+  <parameter index="297" scadaName="KAL_DRZ_RECKW_GR5_IW" ruName="KAL_DRZ_RECKW_GR5_IW" enName="KAL_DRZ_RECKW_GR5_IW" />
+  <parameter index="298" scadaName="KAL_DRZ_RECKW_GR6_IW" ruName="KAL_DRZ_RECKW_GR6_IW" enName="KAL_DRZ_RECKW_GR6_IW" />
+  <parameter index="299" scadaName="KAL_DRZ_RECKW_GR7_IW" ruName="KAL_DRZ_RECKW_GR7_IW" enName="KAL_DRZ_RECKW_GR7_IW" />
+  <parameter index="300" scadaName="KAL_DRZ_RECKW_GR8_IW" ruName="KAL_DRZ_RECKW_GR8_IW" enName="KAL_DRZ_RECKW_GR8_IW" />
+  <parameter index="301" scadaName="KAL_DRZ_RECKW_GR9_IW" ruName="KAL_DRZ_RECKW_GR9_IW" enName="KAL_DRZ_RECKW_GR9_IW" />
+  <parameter index="302" scadaName="KAL_DRZ_TMPERW_GR1_BW" ruName="KAL_DRZ_TMPERW_GR1_BW" enName="KAL_DRZ_TMPERW_GR1_BW" />
+  <parameter index="303" scadaName="KAL_DRZ_TMPERW_GR1_IW" ruName="KAL_DRZ_TMPERW_GR1_IW" enName="KAL_DRZ_TMPERW_GR1_IW" />
+  <parameter index="304" scadaName="KAL_DRZ_TMPERW_GR2_BW" ruName="KAL_DRZ_TMPERW_GR2_BW" enName="KAL_DRZ_TMPERW_GR2_BW" />
+  <parameter index="305" scadaName="KAL_DRZ_TMPERW_GR2_IW" ruName="KAL_DRZ_TMPERW_GR2_IW" enName="KAL_DRZ_TMPERW_GR2_IW" />
+  <parameter index="306" scadaName="KAL_DRZ_W1_BW" ruName="KAL_DRZ_W1_BW" enName="KAL_DRZ_W1_BW" />
+  <parameter index="307" scadaName="KAL_DRZ_W1_IW" ruName="KAL_DRZ_W1_IW" enName="KAL_DRZ_W1_IW" />
+  <parameter index="308" scadaName="KAL_DRZ_W2_BW" ruName="KAL_DRZ_W2_BW" enName="KAL_DRZ_W2_BW" />
+  <parameter index="309" scadaName="KAL_DRZ_W2_IW" ruName="KAL_DRZ_W2_IW" enName="KAL_DRZ_W2_IW" />
+  <parameter index="310" scadaName="KAL_DRZ_W3_BW" ruName="KAL_DRZ_W3_BW" enName="KAL_DRZ_W3_BW" />
+  <parameter index="311" scadaName="KAL_DRZ_W3_IW" ruName="KAL_DRZ_W3_IW" enName="KAL_DRZ_W3_IW" />
+  <parameter index="312" scadaName="KAL_DRZ_W4_BW" ruName="KAL_DRZ_W4_BW" enName="KAL_DRZ_W4_BW" />
+  <parameter index="313" scadaName="KAL_DRZ_W4_IW" ruName="KAL_DRZ_W4_IW" enName="KAL_DRZ_W4_IW" />
+  <parameter index="314" scadaName="KAL_DRZ_ZUGW_GR1_BW" ruName="KAL_DRZ_ZUGW_GR1_BW" enName="KAL_DRZ_ZUGW_GR1_BW" />
+  <parameter index="315" scadaName="KAL_DRZ_ZUGW_GR1_IW" ruName="KAL_DRZ_ZUGW_GR1_IW" enName="KAL_DRZ_ZUGW_GR1_IW" />
+  <parameter index="316" scadaName="KAL_DRZ_ZUGW_GR2_BW" ruName="KAL_DRZ_ZUGW_GR2_BW" enName="KAL_DRZ_ZUGW_GR2_BW" />
+  <parameter index="317" scadaName="KAL_DRZ_ZUGW_GR2_IW" ruName="KAL_DRZ_ZUGW_GR2_IW" enName="KAL_DRZ_ZUGW_GR2_IW" />
+  <parameter index="318" scadaName="KAL_DRZ_ZUGW_GR3_BW" ruName="KAL_DRZ_ZUGW_GR3_BW" enName="KAL_DRZ_ZUGW_GR3_BW" />
+  <parameter index="319" scadaName="KAL_DRZ_ZUGW_GR3_IW" ruName="KAL_DRZ_ZUGW_GR3_IW" enName="KAL_DRZ_ZUGW_GR3_IW" />
+  <parameter index="320" scadaName="KAL_SCHRAEGVERST_W3_GS_IW" ruName="KAL_SCHRAEGVERST_W3_GS_IW" enName="KAL_SCHRAEGVERST_W3_GS_IW" />
+  <parameter index="321" scadaName="KAL_SCHRAEGVERST_W3_HS_IW" ruName="KAL_SCHRAEGVERST_W3_HS_IW" enName="KAL_SCHRAEGVERST_W3_HS_IW" />
+  <parameter index="322" scadaName="KAL_ZUG_MESSW1_GS_IW" ruName="KAL_ZUG_MESSW1_GS_IW" enName="KAL_ZUG_MESSW1_GS_IW" />
+  <parameter index="323" scadaName="KAL_ZUG_MESSW1_HS_IW" ruName="KAL_ZUG_MESSW1_HS_IW" enName="KAL_ZUG_MESSW1_HS_IW" />
+  <parameter index="324" scadaName="KAL_ZUG_MESSW2_GS_IW" ruName="KAL_ZUG_MESSW2_GS_IW" enName="KAL_ZUG_MESSW2_GS_IW" />
+  <parameter index="325" scadaName="KAL_ZUG_MESSW2_HS_IW" ruName="KAL_ZUG_MESSW2_HS_IW" enName="KAL_ZUG_MESSW2_HS_IW" />
+  <parameter index="326" scadaName="EX_FUELLHOEHE_SUM" ruName="EX_FUELLHOEHE_SUM" enName="EX_FUELLHOEHE_SUM" />
+  <parameter index="327" scadaName="KN_FUELLHOEHE_SUM" ruName="KN_FUELLHOEHE_SUM" enName="KN_FUELLHOEHE_SUM" />
+</parameters>

@@ -1,0 +1,612 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B59F9DE2-3066-4A67-AAE9-28DAEC70EDEE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataMiningOffLine</RootNamespace>
+    <AssemblyName>DataMiningOffLine</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>trends.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Excel, Version=2.1.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\Импорт в ЭКСЕЛЬ\Дерево+Визуализация\Дерево+Визуализация\Project\DM.Core\bin\Debug\Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\Импорт в ЭКСЕЛЬ\Дерево+Визуализация\Дерево+Визуализация\Project\DM.Core\bin\Debug\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqToExcel, Version=1.11.0.0, Culture=neutral, PublicKeyToken=9c8ea65a58f03f1f, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\LinqToExcel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Remotion, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Remotion.Data.Linq, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.Data.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Remotion.Interfaces, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ScottPlot, Version=3.1.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\ScottPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.106.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.106.0\lib\net451\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.106.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.106.0\lib\net451\System.Data.SQLite.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.106.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.106.0\lib\net451\System.Data.SQLite.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WPFExtensions">
+      <HintPath>..\..\..\..\..\Desktop\Tree\Project\bin\Debug\WPFExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="ZedGraph, Version=5.1.7.430, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ZedGraph.5.1.7\lib\net35-Client\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Calculation.cs" />
+    <Compile Include="DataBaseND.cs" />
+    <Compile Include="DataMiningDataSet.cs">
+      <DependentUpon>DataMiningDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataMiningDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataMiningDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataMiningDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataMiningDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBClasses\Data_Values.cs" />
+    <Compile Include="DBClasses\HelpInfo.cs" />
+    <Compile Include="DBClasses\Parameters.cs" />
+    <Compile Include="DBClasses\ParseExcel.cs" />
+    <Compile Include="DBClasses\Queries.cs" />
+    <Compile Include="DBClasses\Recomend.cs" />
+    <Compile Include="Forms\AuthorizationND.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AuthorizationND.Designer.cs">
+      <DependentUpon>AuthorizationND.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DictionaryParameters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DictionaryParameters.Designer.cs">
+      <DependentUpon>DictionaryParameters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EC_INformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EC_INformation.Designer.cs">
+      <DependentUpon>EC_INformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ESAlgs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ESAlgs.Designer.cs">
+      <DependentUpon>ESAlgs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExtruderCleaning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExtruderCleaning.Designer.cs">
+      <DependentUpon>ExtruderCleaning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Helper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Helper.Designer.cs">
+      <DependentUpon>Helper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Helper_parameters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Helper_parameters.Designer.cs">
+      <DependentUpon>Helper_parameters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InterfaceAdminND.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InterfaceAdminND.Designer.cs">
+      <DependentUpon>InterfaceAdminND.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\KPI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KPI.Designer.cs">
+      <DependentUpon>KPI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OptionND.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OptionND.Designer.cs">
+      <DependentUpon>OptionND.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QualityFind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\QualityFind.Designer.cs">
+      <DependentUpon>QualityFind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Trends.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Trends.Designer.cs">
+      <DependentUpon>Trends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\Localisation.cs" />
+    <Compile Include="Forms\NormalDistribution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NormalDistribution.Designer.cs">
+      <DependentUpon>NormalDistribution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Math\Regression\SVDHelper.cs" />
+    <Compile Include="ProductionTime.cs" />
+    <Compile Include="Forms\tableRolls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\tableRolls.Designer.cs">
+      <DependentUpon>tableRolls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hex\Board.cs" />
+    <Compile Include="Hex\BoardState.cs" />
+    <Compile Include="Forms\Data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Data.Designer.cs">
+      <DependentUpon>Data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DesitionTree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DesitionTree.Designer.cs">
+      <DependentUpon>DesitionTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Diagramm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Diagramm.Designer.cs">
+      <DependentUpon>Diagramm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DictionaryMeasurement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DictionaryMeasurement.Designer.cs">
+      <DependentUpon>DictionaryMeasurement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Math\Fisher\FisheCritery.cs" />
+    <Compile Include="Math\Fisher\Fisher.cs" />
+    <Compile Include="Hex\FlatVertice.cs" />
+    <Compile Include="Hex\GraphicsEngine.cs" />
+    <Compile Include="Hex\Hex.cs" />
+    <Compile Include="Hex\HexOrientation.cs" />
+    <Compile Include="Hex\HexState.cs" />
+    <Compile Include="Forms\Kohonen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Kohonen.Designer.cs">
+      <DependentUpon>Kohonen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Math\NeuralNetwork\LearningNetwork.cs" />
+    <Compile Include="Math\Fisher\ListOfElement.cs" />
+    <Compile Include="Math\MapSettings.cs" />
+    <Compile Include="Measurements.cs" />
+    <Compile Include="Forms\MnemonicScheme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MnemonicScheme.Designer.cs">
+      <DependentUpon>MnemonicScheme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hex\MyMath.cs" />
+    <Compile Include="Localization\MyStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Localization\MyStrings.en-US.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyStrings.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Math\NeuralNetwork\NetworkOperation.cs" />
+    <Compile Include="Math\NeuralNetwork\NetworkSettings.cs" />
+    <Compile Include="Math\Normalise.cs" />
+    <Compile Include="Forms\ParameterAnalyzerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ParameterAnalyzerForm.Designer.cs">
+      <DependentUpon>ParameterAnalyzerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParameterCharacteristics.cs" />
+    <Compile Include="Forms\ParentForMaps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ParentForMaps.Designer.cs">
+      <DependentUpon>ParentForMaps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hex\PointyVertice.cs" />
+    <Compile Include="Hex\ProcessingData.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\RegressionModelcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegressionModelcs.Designer.cs">
+      <DependentUpon>RegressionModelcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Math\Regression\Regression.cs" />
+    <Compile Include="Forms\RegressionAnalysisNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegressionAnalysisNew.Designer.cs">
+      <DependentUpon>RegressionAnalysisNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stat.cs" />
+    <Compile Include="Forms\TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TrafficLight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TrafficLight.Designer.cs">
+      <DependentUpon>TrafficLight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XML\XMLWork.cs" />
+    <EmbeddedResource Include="Forms\AuthorizationND.resx">
+      <DependentUpon>AuthorizationND.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Data.en-001.resx">
+      <DependentUpon>Data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Data.en-US.resx">
+      <DependentUpon>Data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Data.resx">
+      <DependentUpon>Data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DesitionTree.en-US.resx">
+      <DependentUpon>DesitionTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DesitionTree.resx">
+      <DependentUpon>DesitionTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Diagramm.en-US.resx">
+      <DependentUpon>Diagramm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Diagramm.resx">
+      <DependentUpon>Diagramm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DictionaryMeasurement.en-US.resx">
+      <DependentUpon>DictionaryMeasurement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DictionaryMeasurement.resx">
+      <DependentUpon>DictionaryMeasurement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DictionaryParameters.en-US.resx">
+      <DependentUpon>DictionaryParameters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DictionaryParameters.resx">
+      <DependentUpon>DictionaryParameters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EC_INformation.resx">
+      <DependentUpon>EC_INformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ESAlgs.resx">
+      <DependentUpon>ESAlgs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExtruderCleaning.resx">
+      <DependentUpon>ExtruderCleaning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Helper.resx">
+      <DependentUpon>Helper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Helper_parameters.resx">
+      <DependentUpon>Helper_parameters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Kohonen.en-US.resx">
+      <DependentUpon>Kohonen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Kohonen.resx">
+      <DependentUpon>Kohonen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KPI.resx">
+      <DependentUpon>KPI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MnemonicScheme.az.resx">
+      <DependentUpon>MnemonicScheme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MnemonicScheme.en-US.resx">
+      <DependentUpon>MnemonicScheme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MnemonicScheme.resx">
+      <DependentUpon>MnemonicScheme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\QualityFind.resx">
+      <DependentUpon>QualityFind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\tableRolls.resx">
+      <DependentUpon>tableRolls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Trends.resx">
+      <DependentUpon>Trends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\MyStrings.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MyStrings.en-US.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\MyStrings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MyStrings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ParameterAnalyzerForm.en-US.resx">
+      <DependentUpon>ParameterAnalyzerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ParameterAnalyzerForm.resx">
+      <DependentUpon>ParameterAnalyzerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ParentForMaps.en-US.resx">
+      <DependentUpon>ParentForMaps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ParentForMaps.resx">
+      <DependentUpon>ParentForMaps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NormalDistribution.resx">
+      <DependentUpon>NormalDistribution.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Forms\RegressionModelcs.en-US.resx">
+      <DependentUpon>RegressionModelcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegressionModelcs.resx">
+      <DependentUpon>RegressionModelcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TrafficLight.en-US.resx">
+      <DependentUpon>TrafficLight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TrafficLight.resx">
+      <DependentUpon>TrafficLight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegressionAnalysisNew.resx">
+      <DependentUpon>RegressionAnalysisNew.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataBase\DataMining.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="DataBase\DataMining.db-shm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="DataBase\DataMining.db-wal">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="DataBase\DataMining_Core.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="DataMining.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="DataMiningDataSet.xsc">
+      <DependentUpon>DataMiningDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataMiningDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataMiningDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataMiningDataSet.xss">
+      <DependentUpon>DataMiningDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataMiningDataSet1.xsc">
+      <DependentUpon>DataMiningDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataMiningDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataMiningDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataMiningDataSet1.xss">
+      <DependentUpon>DataMiningDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DM.Data\DM.Data.csproj">
+      <Project>{3BF0EA3A-E7AC-48E1-86BA-5526054578B3}</Project>
+      <Name>DM.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DM.DecisionTree\DM.DecisionTree.csproj">
+      <Project>{06268A48-838E-4CE7-931F-9B5F392206EF}</Project>
+      <Name>DM.DecisionTree</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DM.Helper\DM.Helper.csproj">
+      <Project>{406B96CE-735D-4014-95A2-2283D3EE37FB}</Project>
+      <Name>DM.Helper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WpfApplication1\DM.WPF_Tree.csproj">
+      <Project>{9B66A9F5-75E9-4DCA-B6D4-11686B191700}</Project>
+      <Name>DM.WPF_Tree</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AjbMd42Yvw4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ESResources\307-001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ESResources\308-309-001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ESResources\310-001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ESResources\311-001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ESResources\316-001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ESResources\319-001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ESResources\401-001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ESResources\503-001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ESResources\602-001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ESResources\705-001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ESResources\710-711-001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ESResources\715-716-001.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="WPFExtensions.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XMLDataBase.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ZedGraph.dll" />
+    <EmbeddedResource Include="Resources\BDUsersND.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DBCriterionND.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <None Include="Resources\ProductionLine.jpg" />
+    <None Include="Images\save-icon-9.png" />
+    <Content Include="trends.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.106.0\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.106.0\build\net451\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.106.0\build\net451\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.106.0\build\net451\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
