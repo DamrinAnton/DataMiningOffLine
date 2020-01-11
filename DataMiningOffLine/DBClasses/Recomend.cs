@@ -14,12 +14,38 @@ namespace DataMiningOffLine.DBClasses
         public string param_st { get; private set; }
         public string place_st { get; private set; }
 
-        public Recomend(long reason_id, int number_in, string text_st, string param_st, string place_st) {
+        public Recomend(long reason_id, int number_in, string text_st, string param_st, string place_st)
+        {
             this.reason_id = reason_id;
             this.number_in = number_in;
             this.text_st = text_st;
             this.param_st = param_st;
             this.place_st = place_st;
+        }
+    }
+    public class Dependences
+    {
+        public string nameES { get; set; }
+        public string firstMaxValue { get; set; }
+        public string secondMaxValue { get; set; }
+        public string typeAnalyse { get; set; }
+
+        public Dependences(string nameES, string firstMaxValue, string secondMaxValue, string typeAnalyse)
+        {
+            this.nameES = nameES;
+            this.firstMaxValue = firstMaxValue;
+            this.secondMaxValue = secondMaxValue;
+            this.typeAnalyse = typeAnalyse;
+        }
+
+    }
+    public class situationsES
+    {
+        public string nameES { get; set; }
+
+        public situationsES(string nameES)
+        {
+            this.nameES = nameES;
         }
     }
 }
