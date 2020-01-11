@@ -12,7 +12,7 @@ namespace DataMiningOffLine.DBClasses
     {
         private void Starter()
         {
-            string databaseName = Parameters.getParam().connection; 
+            string databaseName = Parameters.getParam().connection;
 
             SQLiteConnection connection =
                             new SQLiteConnection(string.Format("Data Source={0};", databaseName));
@@ -28,7 +28,8 @@ namespace DataMiningOffLine.DBClasses
             connection.Close();
         }
 
-        public static string GetAVG(string paramName) {
+        public static string GetAVG(string paramName)
+        {
             string databaseName = Parameters.getParam().connection;
 
             SQLiteConnection connection =
@@ -36,7 +37,7 @@ namespace DataMiningOffLine.DBClasses
 
 
             connection.Open();
-            SQLiteCommand command1 = new SQLiteCommand("SELECT AVG(value) as AV FROM Measurements M, Parameters P WHERE P.id = M.param_id AND P.name_st = '" + 
+            SQLiteCommand command1 = new SQLiteCommand("SELECT AVG(value) as AV FROM Measurements M, Parameters P WHERE P.id = M.param_id AND P.name_st = '" +
                 paramName + "' AND M.value != '               '; ", connection);
             SQLiteDataReader reader = command1.ExecuteReader();
             string outstr = "";
@@ -58,7 +59,8 @@ namespace DataMiningOffLine.DBClasses
             return data[data.Length / 2];
         }
 
-        public static double GetLimit(string column, string paramName) {
+        public static double GetLimit(string column, string paramName)
+        {
 
             string databaseName = Parameters.getParam().connection;
 
@@ -78,8 +80,93 @@ namespace DataMiningOffLine.DBClasses
 
             return data;
         }
+        public static List<situationsES> GetESSituations()
+        {
+            List<situationsES> data = new List<situationsES>();
+            string databaseName = Parameters.getParam().connection;
 
-        public static List<Recomend> GetListOfRecomend() {
+            SQLiteConnection connection =
+                        new SQLiteConnection(string.Format("Data Source={0};", databaseName));
+
+            connection.Open();
+            string querry = "SELECT DISTINCT D.ES_text FROM Dependences D;";
+            SQLiteCommand command1 = new SQLiteCommand(querry, connection);
+            SQLiteDataReader reader = command1.ExecuteReader();
+
+            while (reader.Read())
+            {
+                data.Add(new situationsES(reader.GetString(0)));
+            }
+
+            connection.Close();
+
+            return data;
+        }
+
+        public static List<Dependences> GetResultAnalyse(string name_es)
+        {
+            List<Dependences> data = new List<Dependences>();
+
+            string databaseName = Parameters.getParam().connection;
+
+            SQLiteConnection connection =
+                        new SQLiteConnection(string.Format("Data Source={0};", databaseName));
+
+            connection.Open();
+
+            string querry = "SELECT ES_text,firstMaxValue,secondMaxValue,TypeAnalyse FROM Dependences "
+                         + " WHERE ES_text = '" + name_es + "';";
+
+            SQLiteCommand command1 = new SQLiteCommand(querry, connection);
+            SQLiteDataReader reader = command1.ExecuteReader();
+
+
+            while (reader.Read())
+            {
+                data.Add(new Dependences(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3)));
+            }
+
+            return data;
+        }
+
+        public static void InsertDependences(List<Dependences> dependences)
+        {
+            string databaseName = Parameters.getParam().connection;
+
+            SQLiteConnection connection =
+                            new SQLiteConnection(string.Format("Data Source={0};", databaseName));
+            connection.Open();
+
+            string querry = "INSERT INTO 'Dependences' (typeAnalyse,ES_text,firstMaxValue,secondMaxValue)"
+                          + " VALUES ('" + dependences[0].typeAnalyse + "','" + dependences[0].nameES + "','" + dependences[0].firstMaxValue + "','" + dependences[0].secondMaxValue + "'),"
+                          + "('" + dependences[1].typeAnalyse + "','" + dependences[1].nameES + "','" + dependences[1].firstMaxValue + "','" + dependences[1].secondMaxValue + "'),"
+                          + "('" + dependences[2].typeAnalyse + "','" + dependences[2].nameES + "','" + dependences[2].firstMaxValue + "','" + dependences[2].secondMaxValue + "'),"
+                          + "('" + dependences[3].typeAnalyse + "','" + dependences[3].nameES + "','" + dependences[3].firstMaxValue + "','" + dependences[3].secondMaxValue + "')";
+
+
+
+            SQLiteCommand command1 = new SQLiteCommand(querry, connection);
+            SQLiteDataReader reader = command1.ExecuteReader();
+            connection.Close();
+        }
+
+        public static void ClearDependences()
+        {
+            string databaseName = Parameters.getParam().connection;
+
+            SQLiteConnection connection =
+                            new SQLiteConnection(string.Format("Data Source={0};", databaseName));
+            connection.Open();
+
+            string querry = "DELETE FROM Dependences";
+
+            SQLiteCommand command1 = new SQLiteCommand(querry, connection);
+            SQLiteDataReader reader = command1.ExecuteReader();
+            connection.Close();
+        }
+
+        public static List<Recomend> GetListOfRecomend()
+        {
 
             List<Recomend> data = new List<Recomend>();
 
@@ -97,10 +184,10 @@ namespace DataMiningOffLine.DBClasses
 
             foreach (DbDataRecord record in reader)
             {
-                data.Add(new Recomend(Convert.ToInt64(record["reason_id"]), 
-                    Convert.ToInt16(record["number_in"]), 
-                    record["text_st"].ToString(), 
-                    record["param_st"].ToString(), 
+                data.Add(new Recomend(Convert.ToInt64(record["reason_id"]),
+                    Convert.ToInt16(record["number_in"]),
+                    record["text_st"].ToString(),
+                    record["param_st"].ToString(),
                     record["place_st"].ToString()));
             }
 
@@ -153,7 +240,7 @@ namespace DataMiningOffLine.DBClasses
             // Change logic hear!
             foreach (DbDataRecord record in reader)
             {
-                if(record["MIN(M.time_st)"].ToString() != "")
+                if (record["MIN(M.time_st)"].ToString() != "")
                     return record["MIN(M.time_st)"].ToString();
             }
 
@@ -174,7 +261,7 @@ namespace DataMiningOffLine.DBClasses
             SQLiteCommand command1 = new SQLiteCommand(querry, connection);
             command1.ExecuteReader();
 
-          
+
 
             connection.Close();
 
@@ -199,7 +286,8 @@ namespace DataMiningOffLine.DBClasses
 
         }
 
-        public static HelpInfo GetInfo(string reason_id, string param_st) {
+        public static HelpInfo GetInfo(string reason_id, string param_st)
+        {
 
             string databaseName = Parameters.getParam().connection;
 
@@ -209,9 +297,9 @@ namespace DataMiningOffLine.DBClasses
             string langText = Localisation.GetInstance().Language.Equals("RU") ? "TEXT_ST" : "TEXTEN_ST";
 
             string querry = "SELECT E.NUMBER_ST, RE." + langText + " FROM RECOMENDATIONS R"
-                +" JOIN REASONS RE ON RE.ID = R.REASON_ID"
-                +" JOIN EMERGENCY_SITUATIONS E ON E.ID = RE.ES_ID"
-                +" WHERE R.REASON_ID = '" + reason_id + "' AND R.PARAM_ST = '" + param_st + "'";
+                + " JOIN REASONS RE ON RE.ID = R.REASON_ID"
+                + " JOIN EMERGENCY_SITUATIONS E ON E.ID = RE.ES_ID"
+                + " WHERE R.REASON_ID = '" + reason_id + "' AND R.PARAM_ST = '" + param_st + "'";
 
             connection.Open();
             SQLiteCommand command1 = new SQLiteCommand(querry, connection);
@@ -279,8 +367,9 @@ namespace DataMiningOffLine.DBClasses
             return time;
         }
 
-        public static List<double> GetMeasurmentsByParam(string param) {
-           
+        public static List<double> GetMeasurmentsByParam(string param)
+        {
+
             string databaseName = Parameters.getParam().connection;
 
             SQLiteConnection connection =
@@ -306,7 +395,8 @@ namespace DataMiningOffLine.DBClasses
             return values;
         }
 
-        public static string GetParamName(string param) {
+        public static string GetParamName(string param)
+        {
             string databaseName = Parameters.getParam().connection;
 
             SQLiteConnection connection =
@@ -329,7 +419,8 @@ namespace DataMiningOffLine.DBClasses
             return null;
         }
 
-        public static string GetExtruderCleaningData() {
+        public static string GetExtruderCleaningData()
+        {
             string databaseName = Parameters.getParam().connection;
 
             SQLiteConnection connection =

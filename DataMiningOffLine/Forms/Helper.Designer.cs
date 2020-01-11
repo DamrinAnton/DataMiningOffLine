@@ -1,8 +1,8 @@
 ﻿namespace DataMiningOffLine.Forms
 {
     partial class HelperForm
-    
-        
+
+
     {
         /// <summary>
         /// Required designer variable.
@@ -30,11 +30,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -75,6 +75,9 @@
             this.recountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.администрированиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.алгоритмыНСToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.зависимостиtoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.открытьЗависимостиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.очиститьРезультатыАнализаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -110,7 +113,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.09091F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.90909F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1285, 825);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1348, 825);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -126,16 +129,16 @@
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 300F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1279, 300);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1342, 300);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.findingErrorsDataGridView);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox6.Location = new System.Drawing.Point(642, 3);
+            this.groupBox6.Location = new System.Drawing.Point(674, 3);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(634, 294);
+            this.groupBox6.Size = new System.Drawing.Size(665, 294);
             this.groupBox6.TabIndex = 1;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "НАЙДЕНЫЕ ОШИБКИ";
@@ -147,8 +150,9 @@
             this.findingErrorsDataGridView.Location = new System.Drawing.Point(3, 18);
             this.findingErrorsDataGridView.Name = "findingErrorsDataGridView";
             this.findingErrorsDataGridView.ReadOnly = true;
+            this.findingErrorsDataGridView.RowHeadersWidth = 51;
             this.findingErrorsDataGridView.RowTemplate.Height = 24;
-            this.findingErrorsDataGridView.Size = new System.Drawing.Size(628, 273);
+            this.findingErrorsDataGridView.Size = new System.Drawing.Size(659, 273);
             this.findingErrorsDataGridView.TabIndex = 0;
             this.findingErrorsDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.findingErrorsDataGridView_CellDoubleClick);
             // 
@@ -158,7 +162,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(633, 294);
+            this.groupBox1.Size = new System.Drawing.Size(665, 294);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ПРОВЕРКА НА ОШИБКИ";
@@ -170,7 +174,7 @@
             this.analyseListBox.ItemHeight = 16;
             this.analyseListBox.Location = new System.Drawing.Point(3, 18);
             this.analyseListBox.Name = "analyseListBox";
-            this.analyseListBox.Size = new System.Drawing.Size(627, 273);
+            this.analyseListBox.Size = new System.Drawing.Size(659, 273);
             this.analyseListBox.TabIndex = 0;
             // 
             // splitContainer1
@@ -187,8 +191,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel5);
-            this.splitContainer1.Size = new System.Drawing.Size(1279, 513);
-            this.splitContainer1.SplitterDistance = 408;
+            this.splitContainer1.Size = new System.Drawing.Size(1342, 513);
+            this.splitContainer1.SplitterDistance = 428;
             this.splitContainer1.TabIndex = 0;
             // 
             // panel1
@@ -198,7 +202,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(406, 511);
+            this.panel1.Size = new System.Drawing.Size(426, 511);
             this.panel1.TabIndex = 0;
             // 
             // groupBox8
@@ -211,43 +215,44 @@
             this.groupBox8.MaximumSize = new System.Drawing.Size(0, 220);
             this.groupBox8.MinimumSize = new System.Drawing.Size(0, 220);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(406, 220);
+            this.groupBox8.Size = new System.Drawing.Size(426, 220);
             this.groupBox8.TabIndex = 1;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "НЕШТАТНЫЕ СИТУАЦИИ";
             // 
             // RecomendsDataGridView
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.RecomendsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.RecomendsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.RecomendsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.RecomendsDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.RecomendsDataGridView.DefaultCellStyle = dataGridViewCellStyle7;
             this.RecomendsDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RecomendsDataGridView.Location = new System.Drawing.Point(3, 18);
             this.RecomendsDataGridView.Name = "RecomendsDataGridView";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.RecomendsDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.RecomendsDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.RecomendsDataGridView.RowHeadersWidth = 51;
             this.RecomendsDataGridView.RowTemplate.Height = 24;
-            this.RecomendsDataGridView.Size = new System.Drawing.Size(400, 199);
+            this.RecomendsDataGridView.Size = new System.Drawing.Size(420, 199);
             this.RecomendsDataGridView.TabIndex = 5;
             this.RecomendsDataGridView.SelectionChanged += new System.EventHandler(this.RecomendsDataGridView_SelectionChanged);
             // 
@@ -262,7 +267,7 @@
             this.groupBox7.MinimumSize = new System.Drawing.Size(0, 160);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox7.Size = new System.Drawing.Size(406, 160);
+            this.groupBox7.Size = new System.Drawing.Size(426, 160);
             this.groupBox7.TabIndex = 0;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "КОД/ТИП НЕШТАТНОЙ СИТУАЦИИ";
@@ -271,45 +276,49 @@
             // 
             this.errorsNamesDataGridView.AllowUserToAddRows = false;
             this.errorsNamesDataGridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.errorsNamesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.errorsNamesDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.errorsNamesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.errorsNamesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.errorsNamesDataGridView.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.errorsNamesDataGridView.DefaultCellStyle = dataGridViewCellStyle10;
             this.errorsNamesDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.errorsNamesDataGridView.Location = new System.Drawing.Point(3, 18);
             this.errorsNamesDataGridView.MultiSelect = false;
             this.errorsNamesDataGridView.Name = "errorsNamesDataGridView";
             this.errorsNamesDataGridView.ReadOnly = true;
+            this.errorsNamesDataGridView.RowHeadersWidth = 51;
             this.errorsNamesDataGridView.RowTemplate.Height = 24;
-            this.errorsNamesDataGridView.Size = new System.Drawing.Size(400, 139);
+            this.errorsNamesDataGridView.Size = new System.Drawing.Size(420, 139);
             this.errorsNamesDataGridView.TabIndex = 2;
             this.errorsNamesDataGridView.SelectionChanged += new System.EventHandler(this.ErrorsNamesDataGridView_SelectionChanged);
             // 
             // Column1
             // 
             this.Column1.HeaderText = "КОД";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            this.Column1.Width = 125;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "ТИП";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             this.Column2.Width = 400;
@@ -317,7 +326,7 @@
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 1;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 865F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 908F));
             this.tableLayoutPanel5.Controls.Add(this.groupBox2, 0, 3);
             this.tableLayoutPanel5.Controls.Add(this.groupBox3, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.groupBox4, 0, 1);
@@ -330,7 +339,7 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(865, 511);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(908, 511);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // groupBox2
@@ -339,7 +348,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(3, 338);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(859, 170);
+            this.groupBox2.Size = new System.Drawing.Size(902, 170);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "ПОСЛЕДНЯЯ ЧИСТКА ЭКСТРУДЕРА";
@@ -359,7 +368,7 @@
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(853, 149);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(896, 149);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // label3
@@ -387,7 +396,7 @@
             // extruderCleaningDataTextBox
             // 
             this.extruderCleaningDataTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.extruderCleaningDataTextBox.Location = new System.Drawing.Point(246, 26);
+            this.extruderCleaningDataTextBox.Location = new System.Drawing.Point(259, 26);
             this.extruderCleaningDataTextBox.Name = "extruderCleaningDataTextBox";
             this.extruderCleaningDataTextBox.ReadOnly = true;
             this.extruderCleaningDataTextBox.Size = new System.Drawing.Size(128, 22);
@@ -396,7 +405,7 @@
             // extruderCleaningRecomendationsTextBox
             // 
             this.extruderCleaningRecomendationsTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.extruderCleaningRecomendationsTextBox.Location = new System.Drawing.Point(246, 100);
+            this.extruderCleaningRecomendationsTextBox.Location = new System.Drawing.Point(259, 100);
             this.extruderCleaningRecomendationsTextBox.Name = "extruderCleaningRecomendationsTextBox";
             this.extruderCleaningRecomendationsTextBox.ReadOnly = true;
             this.extruderCleaningRecomendationsTextBox.Size = new System.Drawing.Size(128, 22);
@@ -408,7 +417,7 @@
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(3, 3);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(859, 100);
+            this.groupBox3.Size = new System.Drawing.Size(902, 100);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "ПРИЧИНА";
@@ -428,7 +437,7 @@
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Location = new System.Drawing.Point(3, 109);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(859, 100);
+            this.groupBox4.Size = new System.Drawing.Size(902, 100);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "ДЕЙСТВИЕ НА ПРИЧИНУ";
@@ -448,7 +457,7 @@
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox5.Location = new System.Drawing.Point(3, 215);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(859, 117);
+            this.groupBox5.Size = new System.Drawing.Size(902, 117);
             this.groupBox5.TabIndex = 2;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "КОНТРОЛИРУЕМЫЕ ПАРАМЕТРЫ";
@@ -473,12 +482,14 @@
             this.создатьОтчетToolStripMenuItem,
             this.recountToolStripMenuItem,
             this.администрированиеToolStripMenuItem,
-            this.алгоритмыНСToolStripMenuItem});
+            this.алгоритмыНСToolStripMenuItem,
+            this.зависимостиtoolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1285, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1348, 28);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // граничащиеПараметрыToolStripMenuItem
             // 
@@ -486,34 +497,34 @@
             this.граничащиеПараметрыToolStripMenuItem1,
             this.чисткаЭкструдераToolStripMenuItem});
             this.граничащиеПараметрыToolStripMenuItem.Name = "граничащиеПараметрыToolStripMenuItem";
-            this.граничащиеПараметрыToolStripMenuItem.Size = new System.Drawing.Size(191, 24);
+            this.граничащиеПараметрыToolStripMenuItem.Size = new System.Drawing.Size(193, 24);
             this.граничащиеПараметрыToolStripMenuItem.Text = "Граничащие параметры";
             // 
             // граничащиеПараметрыToolStripMenuItem1
             // 
             this.граничащиеПараметрыToolStripMenuItem1.Name = "граничащиеПараметрыToolStripMenuItem1";
-            this.граничащиеПараметрыToolStripMenuItem1.Size = new System.Drawing.Size(254, 26);
+            this.граничащиеПараметрыToolStripMenuItem1.Size = new System.Drawing.Size(262, 26);
             this.граничащиеПараметрыToolStripMenuItem1.Text = "Граничащие параметры";
             this.граничащиеПараметрыToolStripMenuItem1.Click += new System.EventHandler(this.граничащиеПараметрыToolStripMenuItem1_Click);
             // 
             // чисткаЭкструдераToolStripMenuItem
             // 
             this.чисткаЭкструдераToolStripMenuItem.Name = "чисткаЭкструдераToolStripMenuItem";
-            this.чисткаЭкструдераToolStripMenuItem.Size = new System.Drawing.Size(254, 26);
+            this.чисткаЭкструдераToolStripMenuItem.Size = new System.Drawing.Size(262, 26);
             this.чисткаЭкструдераToolStripMenuItem.Text = "Чистка экструдера";
             this.чисткаЭкструдераToolStripMenuItem.Click += new System.EventHandler(this.чисткаЭкструдераToolStripMenuItem_Click);
             // 
             // спрToolStripMenuItem
             // 
             this.спрToolStripMenuItem.Name = "спрToolStripMenuItem";
-            this.спрToolStripMenuItem.Size = new System.Drawing.Size(227, 24);
+            this.спрToolStripMenuItem.Size = new System.Drawing.Size(229, 24);
             this.спрToolStripMenuItem.Text = "Справка нештатных ситуаций";
             this.спрToolStripMenuItem.Click += new System.EventHandler(this.спрToolStripMenuItem_Click);
             // 
             // трендыToolStripMenuItem
             // 
             this.трендыToolStripMenuItem.Name = "трендыToolStripMenuItem";
-            this.трендыToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
+            this.трендыToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.трендыToolStripMenuItem.Text = "Тренды";
             this.трендыToolStripMenuItem.Visible = false;
             // 
@@ -523,56 +534,80 @@
             this.русскийRUToolStripMenuItem,
             this.englishENToolStripMenuItem});
             this.сменитьЯзыкToolStripMenuItem.Name = "сменитьЯзыкToolStripMenuItem";
-            this.сменитьЯзыкToolStripMenuItem.Size = new System.Drawing.Size(118, 24);
+            this.сменитьЯзыкToolStripMenuItem.Size = new System.Drawing.Size(120, 24);
             this.сменитьЯзыкToolStripMenuItem.Text = "Сменить язык";
             // 
             // русскийRUToolStripMenuItem
             // 
             this.русскийRUToolStripMenuItem.Name = "русскийRUToolStripMenuItem";
-            this.русскийRUToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
+            this.русскийRUToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
             this.русскийRUToolStripMenuItem.Text = "РУССКИЙ [RU]";
             this.русскийRUToolStripMenuItem.Click += new System.EventHandler(this.русскийRUToolStripMenuItem_Click);
             // 
             // englishENToolStripMenuItem
             // 
             this.englishENToolStripMenuItem.Name = "englishENToolStripMenuItem";
-            this.englishENToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
+            this.englishENToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
             this.englishENToolStripMenuItem.Text = "ENGLISH [EN]";
             this.englishENToolStripMenuItem.Click += new System.EventHandler(this.englishENToolStripMenuItem_Click);
             // 
             // создатьОтчетToolStripMenuItem
             // 
             this.создатьОтчетToolStripMenuItem.Name = "создатьОтчетToolStripMenuItem";
-            this.создатьОтчетToolStripMenuItem.Size = new System.Drawing.Size(117, 24);
+            this.создатьОтчетToolStripMenuItem.Size = new System.Drawing.Size(119, 24);
             this.создатьОтчетToolStripMenuItem.Text = "Создать отчет";
             this.создатьОтчетToolStripMenuItem.Click += new System.EventHandler(this.создатьОтчетToolStripMenuItem_Click);
             // 
             // recountToolStripMenuItem
             // 
             this.recountToolStripMenuItem.Name = "recountToolStripMenuItem";
-            this.recountToolStripMenuItem.Size = new System.Drawing.Size(109, 24);
+            this.recountToolStripMenuItem.Size = new System.Drawing.Size(111, 24);
             this.recountToolStripMenuItem.Text = "Пересчитать";
             this.recountToolStripMenuItem.Click += new System.EventHandler(this.recountToolStripMenuItem_Click);
             // 
             // администрированиеToolStripMenuItem
             // 
             this.администрированиеToolStripMenuItem.Name = "администрированиеToolStripMenuItem";
-            this.администрированиеToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
+            this.администрированиеToolStripMenuItem.Size = new System.Drawing.Size(170, 24);
             this.администрированиеToolStripMenuItem.Text = "Администрирование";
             this.администрированиеToolStripMenuItem.Visible = false;
             // 
             // алгоритмыНСToolStripMenuItem
             // 
             this.алгоритмыНСToolStripMenuItem.Name = "алгоритмыНСToolStripMenuItem";
-            this.алгоритмыНСToolStripMenuItem.Size = new System.Drawing.Size(124, 24);
+            this.алгоритмыНСToolStripMenuItem.Size = new System.Drawing.Size(126, 24);
             this.алгоритмыНСToolStripMenuItem.Text = "Алгоритмы НС";
             this.алгоритмыНСToolStripMenuItem.Click += new System.EventHandler(this.алгоритмыНСToolStripMenuItem_Click);
+            // 
+            // зависимостиtoolStripMenuItem1
+            // 
+            this.зависимостиtoolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.открытьЗависимостиToolStripMenuItem,
+            this.очиститьРезультатыАнализаToolStripMenuItem});
+            this.зависимостиtoolStripMenuItem1.Name = "зависимостиtoolStripMenuItem1";
+            this.зависимостиtoolStripMenuItem1.Size = new System.Drawing.Size(157, 24);
+            this.зависимостиtoolStripMenuItem1.Text = "ЗАВИСИМОСТИ НС";
+            this.зависимостиtoolStripMenuItem1.Click += new System.EventHandler(this.зависимостиtoolStripMenuItem1_Click);
+            // 
+            // открытьЗависимостиToolStripMenuItem
+            // 
+            this.открытьЗависимостиToolStripMenuItem.Name = "открытьЗависимостиToolStripMenuItem";
+            this.открытьЗависимостиToolStripMenuItem.Size = new System.Drawing.Size(299, 26);
+            this.открытьЗависимостиToolStripMenuItem.Text = "Открыть зависимости";
+            this.открытьЗависимостиToolStripMenuItem.Click += new System.EventHandler(this.открытьЗависимостиToolStripMenuItem_Click);
+            // 
+            // очиститьРезультатыАнализаToolStripMenuItem
+            // 
+            this.очиститьРезультатыАнализаToolStripMenuItem.Name = "очиститьРезультатыАнализаToolStripMenuItem";
+            this.очиститьРезультатыАнализаToolStripMenuItem.Size = new System.Drawing.Size(299, 26);
+            this.очиститьРезультатыАнализаToolStripMenuItem.Text = "Очистить результаты анализа";
+            this.очиститьРезультатыАнализаToolStripMenuItem.Click += new System.EventHandler(this.очиститьРезультатыАнализаToolStripMenuItem_Click);
             // 
             // HelperForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1285, 853);
+            this.ClientSize = new System.Drawing.Size(1348, 853);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
@@ -651,5 +686,8 @@
         private System.Windows.Forms.ToolStripMenuItem граничащиеПараметрыToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem чисткаЭкструдераToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem алгоритмыНСToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem зависимостиtoolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem открытьЗависимостиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem очиститьРезультатыАнализаToolStripMenuItem;
     }
-    }
+}

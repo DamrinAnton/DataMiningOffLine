@@ -15,7 +15,7 @@ using System.Diagnostics;
 
 namespace DataMiningOffLine.Forms
 {
-    public partial class HelperForm : Form   
+    public partial class HelperForm : Form
     {
         private List<RecomendationsStruct> _error_311_RU = ExeptionsData.getInstance().GetList_error_311_RU();
         private List<RecomendationsStruct> _error_715_RU = ExeptionsData.getInstance().GetList_error_715_RU();
@@ -39,7 +39,7 @@ namespace DataMiningOffLine.Forms
         public HelperForm()
         {
             InitializeComponent();
-            DBClasses.Parameters.getParam().connection = Directory.GetCurrentDirectory()+ @"\DataBase\DataMining.db";
+            DBClasses.Parameters.getParam().connection = Directory.GetCurrentDirectory() + @"\DataBase\DataMining.db";
             Localisation.GetInstance().Language = "EN";
             StartViewParametrs();
 
@@ -53,7 +53,8 @@ namespace DataMiningOffLine.Forms
             { MessageBox.Show(Localisation.GetInstance().Language.Equals("RU") ? "База данных пуста, заполните базу данных" : "The Database is empty, fill the Database"); }
         }
 
-        private void FindErrors() {
+        private void FindErrors()
+        {
             analyseListBox.Items.Clear();
 
             if (Localisation.GetInstance().Language.Equals("RU"))
@@ -67,7 +68,8 @@ namespace DataMiningOffLine.Forms
                 Model("319", "Желто-Коричневые полосы (следы сгоревшего материала)", _error_319_RU);
                 Model("307", "Воздух/Пузыри в пленке", _error_307_RU);
             }
-            else if (Localisation.GetInstance().Language.Equals("EN")) {
+            else if (Localisation.GetInstance().Language.Equals("EN"))
+            {
                 Model("311", "Black dots", _error_311_EN);
                 Model("715/716", "Incorrect heat shrinkage", _error_715_EN);
                 Model("710", "Deflection by Gloss/Turbidity", _error_710_EN);
@@ -85,7 +87,8 @@ namespace DataMiningOffLine.Forms
             DBClasses.ParseExcel.addMeasurements();
         }
         // Начальные параметры для компонентов View
-        private void StartViewParametrs() {
+        private void StartViewParametrs()
+        {
 
             //exeptionNumberLabel.Font = new Font(exeptionNumberLabel.Font, FontStyle.Underline);
 
@@ -99,7 +102,8 @@ namespace DataMiningOffLine.Forms
         }
 
         // Перечень ошибок и их названия
-        private void Errors() {
+        private void Errors()
+        {
             errorsNamesDataGridView.Rows.Clear();
 
             if (Localisation.GetInstance().Language.Equals("RU"))
@@ -112,7 +116,8 @@ namespace DataMiningOffLine.Forms
                 errorsNamesDataGridView.Rows.Add(new String[] { "319", "ЖЕЛТО-КОРИЧНЕВЫЕ ПОЛОСЫ (СЛЕДЫ СГОРЕВШЕГО МАТЕРИАЛА)" });
                 errorsNamesDataGridView.Rows.Add(new String[] { "307", "ВОЗДУХ/ПУЗЫРИ В ПЛЕНКЕ" });
             }
-            else if (Localisation.GetInstance().Language.Equals("EN")) {
+            else if (Localisation.GetInstance().Language.Equals("EN"))
+            {
                 errorsNamesDataGridView.Rows.Add(new String[] { "311", "BLACK DOTS" });
                 errorsNamesDataGridView.Rows.Add(new String[] { "715/716", "INCORRECT HEAT SHRINKAGE" });
                 errorsNamesDataGridView.Rows.Add(new String[] { "710", "DEFLECTION BY GLOSS/TURBIDITY" });
@@ -184,8 +189,9 @@ namespace DataMiningOffLine.Forms
             }
         }
 
-        
-        private void ShowAnalysingError(String errorNumber, String name) {
+
+        private void ShowAnalysingError(String errorNumber, String name)
+        {
             //exeptionNumberLabel.Text = errorNumber;
             //exeptionTypeLabel.Text = name;
 
@@ -208,7 +214,8 @@ namespace DataMiningOffLine.Forms
             }
         }
 
-        private void Analyse(string errorNumber, string reason, string parameter) {
+        private void Analyse(string errorNumber, string reason, string parameter)
+        {
             int parameterID = XMLWork.FindID(parameter);
 
             if (parameterID == 0)
@@ -233,6 +240,24 @@ namespace DataMiningOffLine.Forms
                     else if (parameter.Equals("OPC_ABZ36_XT_K02"))
                     {
                         if (!(row.Input[69] > 70m && row.Input[69] < 90m))
+                        {
+                            analyseListBox.Items.Add(Localisation.GetInstance().Language.Equals("RU") ? "====> Ошибка!" : "====> Error!");
+                            //findingErrorsDataGridView.Rows.Add(new String[] { errorNumber, reason, parameter, row.Date.TimeOfDay.ToString() });
+                            return;
+                        }
+                    }
+                    else if (parameter.Equals("OPC_V_shnek_K02"))
+                    {
+                        if (!(row.Input[48] > 85m && row.Input[48] < 150m))
+                        {
+                            analyseListBox.Items.Add(Localisation.GetInstance().Language.Equals("RU") ? "====> Ошибка!" : "====> Error!");
+                            //findingErrorsDataGridView.Rows.Add(new String[] { errorNumber, reason, parameter, row.Date.TimeOfDay.ToString() });
+                            return;
+                        }
+                    }
+                    else if (parameter.Equals("OPC_V_voronka_K02"))
+                    {
+                        if (!(row.Input[46] > 8m && row.Input[46] < 15m))
                         {
                             analyseListBox.Items.Add(Localisation.GetInstance().Language.Equals("RU") ? "====> Ошибка!" : "====> Error!");
                             //findingErrorsDataGridView.Rows.Add(new String[] { errorNumber, reason, parameter, row.Date.TimeOfDay.ToString() });
@@ -271,21 +296,24 @@ namespace DataMiningOffLine.Forms
             int rowindex = findingErrorsDataGridView.CurrentCell.RowIndex;
             label7.Text = findingErrorsDataGridView.Rows[rowindex].Cells[1].Value.ToString();
 
-            foreach (RecomendationsStruct ex in _error_715_RU) { 
-                if(ex.Reason.Equals(label7.Text)){
+            foreach (RecomendationsStruct ex in _error_715_RU)
+            {
+                if (ex.Reason.Equals(label7.Text))
+                {
                     label8.Text = ex.Actions;
                     label9.Text = ex.ControlParameter;
                 }
             }
-            
+
             label7.Visible = true;
             label8.Visible = true;
             label9.Visible = true;
-            
+
         }
 
         // 31.05.2018 здесь исправляем!!!!!!!!!!!!!!!!
-        private void Analyse_other() {
+        private void Analyse_other()
+        {
 
             //DBClasses.Queries.Update(@"INSERT INTO Measurements (value) VALUES ('1');");
 
@@ -313,7 +341,7 @@ namespace DataMiningOffLine.Forms
         {
             new EC_INformation().Show();
         }
-        
+
         private void создатьОтчетToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -329,7 +357,8 @@ namespace DataMiningOffLine.Forms
                 }
 
                 string data = "";
-                foreach (DataGridViewRow row in findingErrorsDataGridView.Rows) {
+                foreach (DataGridViewRow row in findingErrorsDataGridView.Rows)
+                {
                     data += row.Cells["Code"].Value + " : " + row.Cells["Name"].Value + " : " + row.Cells["ParamValue"].Value + Environment.NewLine;
                 }
 
@@ -338,7 +367,8 @@ namespace DataMiningOffLine.Forms
                 {
                     byte[] info;
 
-                    if (Localisation.GetInstance().Language.Equals("RU")) {
+                    if (Localisation.GetInstance().Language.Equals("RU"))
+                    {
                         info = new UTF8Encoding(true).GetBytes("ОТЧЕТ ПО ВОЗНИКНОВЕНИЮ НЕШТАТНЫХ СИТУАЦИЙ ЗА " + DateTime.Today.ToString("D") + string.Format("{0:HH:mm:ss tt}", DateTime.Now)/*.Replace(':', ' ')*/
                             + Environment.NewLine + Environment.NewLine
                             + Environment.NewLine + "По технологическим данным, обнаружены следующие нештатные ситуации: "
@@ -347,7 +377,8 @@ namespace DataMiningOffLine.Forms
                             + Environment.NewLine + Environment.NewLine + Environment.NewLine + "Чистка экструдера проводилась: " + extruderCleaningDataTextBox.Text);
                         // Add some information to the file.
                     }
-                    else {
+                    else
+                    {
                         info = new UTF8Encoding(true).GetBytes("STATISTICAL ACCOUNT REPORT FOR" + DateTime.Today.ToString("D") + string.Format("{0: HH: mm: ss tt}", DateTime.Now) /*.Replace(':', '') */
                              + Environment.NewLine + Environment.NewLine
                              + Environment.NewLine + "According to technological data, the following abnormal situations were detected:"
@@ -355,7 +386,7 @@ namespace DataMiningOffLine.Forms
                              + Environment.NewLine + Environment.NewLine + data
                              + Environment.NewLine + Environment.NewLine + Environment.NewLine + "The extruder was cleaned:" + extruderCleaningDataTextBox.Text);
                     }
-                        fs.Write(info, 0, info.Length);
+                    fs.Write(info, 0, info.Length);
                 }
             }
 
@@ -385,7 +416,7 @@ namespace DataMiningOffLine.Forms
             трендыToolStripMenuItem.Text = "ТРЕНДЫ";
             сменитьЯзыкToolStripMenuItem.Text = "СМЕНИТЬ ЯЗЫК";
             создатьОтчетToolStripMenuItem.Text = "СОЗДАТЬ ОТЧЕТ";
-            
+
             recountToolStripMenuItem.Text = "ПЕРЕСЧИТАТЬ";
             граничащиеПараметрыToolStripMenuItem1.Text = "ГРАНИЧАЩИЕ ПАРАМЕТРЫ";
             чисткаЭкструдераToolStripMenuItem.Text = "ЧИСТКА ЭКСТРУДЕРА";
@@ -433,7 +464,7 @@ namespace DataMiningOffLine.Forms
             трендыToolStripMenuItem.Text = "TRENDS";
             сменитьЯзыкToolStripMenuItem.Text = "LANGUAGE";
             создатьОтчетToolStripMenuItem.Text = "CREATE REPORT";
-            
+
             recountToolStripMenuItem.Text = "RECOUNT";
             граничащиеПараметрыToolStripMenuItem1.Text = "BORDER PARAMETERS";
             чисткаЭкструдераToolStripMenuItem.Text = "CLEANING THE EXTRUDER";
@@ -470,7 +501,8 @@ namespace DataMiningOffLine.Forms
 
         #endregion
 
-        private void ChangeFindingErrorsLanguage() {
+        private void ChangeFindingErrorsLanguage()
+        {
             // foreach элемент в таблице, замена + написать запрос
             foreach (DataGridViewRow row in findingErrorsDataGridView.Rows)
             {
@@ -488,7 +520,7 @@ namespace DataMiningOffLine.Forms
 
         }
 
-       
+
 
         private void recountToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -534,7 +566,7 @@ namespace DataMiningOffLine.Forms
         {
             DateTime dt1 = ConvertToDateTime(cleaning);
             DateTime dt2 = DateTime.Today;
-            
+
             return (dt2 - dt1).Days;
         }
 
@@ -565,6 +597,27 @@ namespace DataMiningOffLine.Forms
         private void алгоритмыНСToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new ESAlgs().Show();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void зависимостиtoolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void очиститьРезультатыАнализаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DBClasses.Queries.ClearDependences();
+
+        }
+
+        private void открытьЗависимостиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new dependenceParameters().Show();
         }
     }
 }
