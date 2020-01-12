@@ -212,6 +212,24 @@
     <Compile Include="Forms\QualityFind.Designer.cs">
       <DependentUpon>QualityFind.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\RegressionAnalysis\AuthorizationRegressionAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegressionAnalysis\AuthorizationRegressionAnalysis.Designer.cs">
+      <DependentUpon>AuthorizationRegressionAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RegressionAnalysis\ModelNameDateSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegressionAnalysis\ModelNameDateSelection.Designer.cs">
+      <DependentUpon>ModelNameDateSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RegressionAnalysis\RegressionModelsDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegressionAnalysis\RegressionModelsDatabase.Designer.cs">
+      <DependentUpon>RegressionModelsDatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Trends.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +243,9 @@
     <Compile Include="Forms\NormalDistribution.Designer.cs">
       <DependentUpon>NormalDistribution.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\RegressionModelEquation.cs" />
+    <Compile Include="Helpers\RegressionModelsDatabaseHelper.cs" />
+    <Compile Include="Math\Regression\ComputableRegressionModel.cs" />
     <Compile Include="Math\Regression\SVDHelper.cs" />
     <Compile Include="ProductionTime.cs" />
     <Compile Include="Forms\tableRolls.cs">
@@ -412,6 +433,18 @@
     <EmbeddedResource Include="Forms\QualityFind.resx">
       <DependentUpon>QualityFind.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegressionAnalysis\AuthorizationRegressionAnalysis.resx">
+      <DependentUpon>AuthorizationRegressionAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegressionAnalysis\ModelNameDateSelection.resx">
+      <DependentUpon>ModelNameDateSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegressionAnalysis\RegressionModelsDatabase.en-US.resx">
+      <DependentUpon>RegressionModelsDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegressionAnalysis\RegressionModelsDatabase.resx">
+      <DependentUpon>RegressionModelsDatabase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\tableRolls.resx">
       <DependentUpon>tableRolls.cs</DependentUpon>
     </EmbeddedResource>
@@ -520,6 +553,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\RegressionModelsDatabase.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

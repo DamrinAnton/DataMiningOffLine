@@ -20,6 +20,7 @@
             base.Dispose(disposing);
         }
 
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -49,6 +50,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegressionAnalysisNew));
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.tabPageGraphics = new System.Windows.Forms.TabPage();
+            this.checkBoxNormalizeValuesPage1 = new System.Windows.Forms.CheckBox();
             this.labelRMSE = new System.Windows.Forms.Label();
             this.labelEquasion = new System.Windows.Forms.Label();
             this.groupBoxQualityParam = new System.Windows.Forms.GroupBox();
@@ -62,6 +64,7 @@
             this.chartRegressionModel = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartResiduals = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPageSimpleLinearRegression = new System.Windows.Forms.TabPage();
+            this.checkBoxNormalizeValuesPage2 = new System.Windows.Forms.CheckBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.chartRSquared = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartFisherCriteria = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -76,6 +79,7 @@
             this.comboBoxQualityParmetersPage2 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPageMultipleLinearRegression = new System.Windows.Forms.TabPage();
+            this.checkBoxNormalizeValuesPage3 = new System.Windows.Forms.CheckBox();
             this.labelRMSEPage3 = new System.Windows.Forms.Label();
             this.richTextBoxRegressionHelpPage3 = new System.Windows.Forms.RichTextBox();
             this.richTextBoxRegressionEquasionPage3 = new System.Windows.Forms.RichTextBox();
@@ -88,9 +92,10 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.comboBoxQualityParametersPage3 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.checkBoxNormalizeValuesPage1 = new System.Windows.Forms.CheckBox();
-            this.checkBoxNormalizeValuesPage2 = new System.Windows.Forms.CheckBox();
-            this.checkBoxNormalizeValuesPage3 = new System.Windows.Forms.CheckBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.databaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openRegresssionModelsDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveCurrentModelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControlMain.SuspendLayout();
             this.tabPageGraphics.SuspendLayout();
             this.groupBoxQualityParam.SuspendLayout();
@@ -113,18 +118,21 @@
             this.tabPageMultipleLinearRegression.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlMain
             // 
+            this.tabControlMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControlMain.Controls.Add(this.tabPageGraphics);
             this.tabControlMain.Controls.Add(this.tabPageSimpleLinearRegression);
             this.tabControlMain.Controls.Add(this.tabPageMultipleLinearRegression);
-            this.tabControlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlMain.Location = new System.Drawing.Point(0, 0);
+            this.tabControlMain.Location = new System.Drawing.Point(0, 26);
             this.tabControlMain.Name = "tabControlMain";
             this.tabControlMain.SelectedIndex = 0;
-            this.tabControlMain.Size = new System.Drawing.Size(1173, 612);
+            this.tabControlMain.Size = new System.Drawing.Size(1173, 586);
             this.tabControlMain.TabIndex = 0;
             this.tabControlMain.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControlMain_Selected);
             // 
@@ -140,10 +148,20 @@
             this.tabPageGraphics.Location = new System.Drawing.Point(4, 25);
             this.tabPageGraphics.Name = "tabPageGraphics";
             this.tabPageGraphics.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageGraphics.Size = new System.Drawing.Size(1165, 583);
+            this.tabPageGraphics.Size = new System.Drawing.Size(1165, 557);
             this.tabPageGraphics.TabIndex = 0;
             this.tabPageGraphics.Text = "Graphics";
             this.tabPageGraphics.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxNormalizeValuesPage1
+            // 
+            this.checkBoxNormalizeValuesPage1.AutoSize = true;
+            this.checkBoxNormalizeValuesPage1.Location = new System.Drawing.Point(697, 24);
+            this.checkBoxNormalizeValuesPage1.Name = "checkBoxNormalizeValuesPage1";
+            this.checkBoxNormalizeValuesPage1.Size = new System.Drawing.Size(124, 20);
+            this.checkBoxNormalizeValuesPage1.TabIndex = 18;
+            this.checkBoxNormalizeValuesPage1.Text = "Normalize values";
+            this.checkBoxNormalizeValuesPage1.UseVisualStyleBackColor = true;
             // 
             // labelRMSE
             // 
@@ -190,8 +208,8 @@
             // 
             // comboBoxQualityParams
             // 
-            this.comboBoxQualityParams.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.comboBoxQualityParams.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxQualityParams.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxQualityParams.FormattingEnabled = true;
@@ -214,7 +232,7 @@
             // 
             // groupBoxProcessParameter
             // 
-            this.groupBoxProcessParameter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.groupBoxProcessParameter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxProcessParameter.Controls.Add(this.label2);
             this.groupBoxProcessParameter.Controls.Add(this.comboBoxInputParams);
@@ -235,8 +253,8 @@
             // 
             // comboBoxInputParams
             // 
-            this.comboBoxInputParams.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.comboBoxInputParams.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxInputParams.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxInputParams.FormattingEnabled = true;
@@ -248,8 +266,8 @@
             // 
             // splitContainerMain
             // 
-            this.splitContainerMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.splitContainerMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainerMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitContainerMain.Location = new System.Drawing.Point(-6, 73);
@@ -265,8 +283,8 @@
             // 
             this.splitContainerMain.Panel2.Controls.Add(this.chartResiduals);
             this.splitContainerMain.Panel2MinSize = 200;
-            this.splitContainerMain.Size = new System.Drawing.Size(1177, 516);
-            this.splitContainerMain.SplitterDistance = 258;
+            this.splitContainerMain.Size = new System.Drawing.Size(1177, 490);
+            this.splitContainerMain.SplitterDistance = 245;
             this.splitContainerMain.TabIndex = 16;
             // 
             // chartRegressionModel
@@ -304,7 +322,7 @@
             series2.Points.Add(dataPoint2);
             this.chartRegressionModel.Series.Add(series1);
             this.chartRegressionModel.Series.Add(series2);
-            this.chartRegressionModel.Size = new System.Drawing.Size(1175, 256);
+            this.chartRegressionModel.Size = new System.Drawing.Size(1175, 243);
             this.chartRegressionModel.TabIndex = 5;
             this.chartRegressionModel.Text = "chart1";
             // 
@@ -332,7 +350,7 @@
             series3.Points.Add(dataPoint3);
             series3.YValuesPerPoint = 2;
             this.chartResiduals.Series.Add(series3);
-            this.chartResiduals.Size = new System.Drawing.Size(1175, 252);
+            this.chartResiduals.Size = new System.Drawing.Size(1175, 239);
             this.chartResiduals.TabIndex = 6;
             this.chartResiduals.Text = "chart1";
             // 
@@ -347,15 +365,27 @@
             this.tabPageSimpleLinearRegression.Location = new System.Drawing.Point(4, 25);
             this.tabPageSimpleLinearRegression.Name = "tabPageSimpleLinearRegression";
             this.tabPageSimpleLinearRegression.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSimpleLinearRegression.Size = new System.Drawing.Size(1165, 583);
+            this.tabPageSimpleLinearRegression.Size = new System.Drawing.Size(1165, 557);
             this.tabPageSimpleLinearRegression.TabIndex = 1;
             this.tabPageSimpleLinearRegression.Text = "Simple linear regression models";
             this.tabPageSimpleLinearRegression.UseVisualStyleBackColor = true;
             // 
+            // checkBoxNormalizeValuesPage2
+            // 
+            this.checkBoxNormalizeValuesPage2.AutoSize = true;
+            this.checkBoxNormalizeValuesPage2.Checked = true;
+            this.checkBoxNormalizeValuesPage2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxNormalizeValuesPage2.Location = new System.Drawing.Point(8, 86);
+            this.checkBoxNormalizeValuesPage2.Name = "checkBoxNormalizeValuesPage2";
+            this.checkBoxNormalizeValuesPage2.Size = new System.Drawing.Size(124, 20);
+            this.checkBoxNormalizeValuesPage2.TabIndex = 19;
+            this.checkBoxNormalizeValuesPage2.Text = "Normalize values";
+            this.checkBoxNormalizeValuesPage2.UseVisualStyleBackColor = true;
+            // 
             // splitContainer1
             // 
-            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitContainer1.Location = new System.Drawing.Point(360, 6);
@@ -455,7 +485,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox2.Controls.Add(this.buttonUnselectAllInputParameters);
             this.groupBox2.Controls.Add(this.buttonSelectAllInputParameters);
@@ -499,8 +529,8 @@
             // 
             // checkedListBoxInputParametersToCheck
             // 
-            this.checkedListBoxInputParametersToCheck.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.checkedListBoxInputParametersToCheck.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkedListBoxInputParametersToCheck.CheckOnClick = true;
             this.checkedListBoxInputParametersToCheck.FormattingEnabled = true;
@@ -524,8 +554,8 @@
             // 
             // comboBoxQualityParmetersPage2
             // 
-            this.comboBoxQualityParmetersPage2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.comboBoxQualityParmetersPage2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxQualityParmetersPage2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxQualityParmetersPage2.FormattingEnabled = true;
@@ -557,10 +587,22 @@
             this.tabPageMultipleLinearRegression.Location = new System.Drawing.Point(4, 25);
             this.tabPageMultipleLinearRegression.Name = "tabPageMultipleLinearRegression";
             this.tabPageMultipleLinearRegression.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageMultipleLinearRegression.Size = new System.Drawing.Size(1165, 583);
+            this.tabPageMultipleLinearRegression.Size = new System.Drawing.Size(1165, 557);
             this.tabPageMultipleLinearRegression.TabIndex = 2;
             this.tabPageMultipleLinearRegression.Text = "Multiple linear regression models";
             this.tabPageMultipleLinearRegression.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxNormalizeValuesPage3
+            // 
+            this.checkBoxNormalizeValuesPage3.AutoSize = true;
+            this.checkBoxNormalizeValuesPage3.Checked = true;
+            this.checkBoxNormalizeValuesPage3.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxNormalizeValuesPage3.Location = new System.Drawing.Point(6, 86);
+            this.checkBoxNormalizeValuesPage3.Name = "checkBoxNormalizeValuesPage3";
+            this.checkBoxNormalizeValuesPage3.Size = new System.Drawing.Size(124, 20);
+            this.checkBoxNormalizeValuesPage3.TabIndex = 23;
+            this.checkBoxNormalizeValuesPage3.Text = "Normalize values";
+            this.checkBoxNormalizeValuesPage3.UseVisualStyleBackColor = true;
             // 
             // labelRMSEPage3
             // 
@@ -575,7 +617,7 @@
             // 
             // richTextBoxRegressionHelpPage3
             // 
-            this.richTextBoxRegressionHelpPage3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.richTextBoxRegressionHelpPage3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBoxRegressionHelpPage3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBoxRegressionHelpPage3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -588,7 +630,7 @@
             // 
             // richTextBoxRegressionEquasionPage3
             // 
-            this.richTextBoxRegressionEquasionPage3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.richTextBoxRegressionEquasionPage3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBoxRegressionEquasionPage3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBoxRegressionEquasionPage3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -611,7 +653,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox3.Controls.Add(this.buttonSelectNoneInputParametersPage3);
             this.groupBox3.Controls.Add(this.buttonSelectAllInputParametersPage3);
@@ -655,8 +697,8 @@
             // 
             // checkedListBoxInputParametersToCheckPage3
             // 
-            this.checkedListBoxInputParametersToCheckPage3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.checkedListBoxInputParametersToCheckPage3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkedListBoxInputParametersToCheckPage3.CheckOnClick = true;
             this.checkedListBoxInputParametersToCheckPage3.FormattingEnabled = true;
@@ -680,8 +722,8 @@
             // 
             // comboBoxQualityParametersPage3
             // 
-            this.comboBoxQualityParametersPage3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.comboBoxQualityParametersPage3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxQualityParametersPage3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxQualityParametersPage3.FormattingEnabled = true;
@@ -701,41 +743,38 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Quality parameter";
             // 
-            // checkBoxNormalizeValuesPage1
+            // menuStrip1
             // 
-            this.checkBoxNormalizeValuesPage1.AutoSize = true;
-            this.checkBoxNormalizeValuesPage1.Checked = true;
-            this.checkBoxNormalizeValuesPage1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxNormalizeValuesPage1.Location = new System.Drawing.Point(697, 24);
-            this.checkBoxNormalizeValuesPage1.Name = "checkBoxNormalizeValuesPage1";
-            this.checkBoxNormalizeValuesPage1.Size = new System.Drawing.Size(124, 20);
-            this.checkBoxNormalizeValuesPage1.TabIndex = 18;
-            this.checkBoxNormalizeValuesPage1.Text = "Normalize values";
-            this.checkBoxNormalizeValuesPage1.UseVisualStyleBackColor = true;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.databaseToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1173, 24);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // checkBoxNormalizeValuesPage2
+            // databaseToolStripMenuItem
             // 
-            this.checkBoxNormalizeValuesPage2.AutoSize = true;
-            this.checkBoxNormalizeValuesPage2.Checked = true;
-            this.checkBoxNormalizeValuesPage2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxNormalizeValuesPage2.Location = new System.Drawing.Point(8, 86);
-            this.checkBoxNormalizeValuesPage2.Name = "checkBoxNormalizeValuesPage2";
-            this.checkBoxNormalizeValuesPage2.Size = new System.Drawing.Size(124, 20);
-            this.checkBoxNormalizeValuesPage2.TabIndex = 19;
-            this.checkBoxNormalizeValuesPage2.Text = "Normalize values";
-            this.checkBoxNormalizeValuesPage2.UseVisualStyleBackColor = true;
+            this.databaseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openRegresssionModelsDatabaseToolStripMenuItem,
+            this.saveCurrentModelToolStripMenuItem});
+            this.databaseToolStripMenuItem.Name = "databaseToolStripMenuItem";
+            this.databaseToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.databaseToolStripMenuItem.Text = "Database";
             // 
-            // checkBoxNormalizeValuesPage3
+            // openRegresssionModelsDatabaseToolStripMenuItem
             // 
-            this.checkBoxNormalizeValuesPage3.AutoSize = true;
-            this.checkBoxNormalizeValuesPage3.Checked = true;
-            this.checkBoxNormalizeValuesPage3.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxNormalizeValuesPage3.Location = new System.Drawing.Point(6, 86);
-            this.checkBoxNormalizeValuesPage3.Name = "checkBoxNormalizeValuesPage3";
-            this.checkBoxNormalizeValuesPage3.Size = new System.Drawing.Size(124, 20);
-            this.checkBoxNormalizeValuesPage3.TabIndex = 23;
-            this.checkBoxNormalizeValuesPage3.Text = "Normalize values";
-            this.checkBoxNormalizeValuesPage3.UseVisualStyleBackColor = true;
+            this.openRegresssionModelsDatabaseToolStripMenuItem.Name = "openRegresssionModelsDatabaseToolStripMenuItem";
+            this.openRegresssionModelsDatabaseToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
+            this.openRegresssionModelsDatabaseToolStripMenuItem.Text = "Open regresssion models database";
+            this.openRegresssionModelsDatabaseToolStripMenuItem.Click += new System.EventHandler(this.openRegressionModelsDatabaseToolStripMenuItem_Click);
+            // 
+            // saveCurrentModelToolStripMenuItem
+            // 
+            this.saveCurrentModelToolStripMenuItem.Name = "saveCurrentModelToolStripMenuItem";
+            this.saveCurrentModelToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
+            this.saveCurrentModelToolStripMenuItem.Text = "Save current model";
+            this.saveCurrentModelToolStripMenuItem.Click += new System.EventHandler(this.saveCurrentModelToolStripMenuItem_Click);
             // 
             // RegressionAnalysisNew
             // 
@@ -743,8 +782,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1173, 612);
             this.Controls.Add(this.tabControlMain);
+            this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MinimumSize = new System.Drawing.Size(1000, 450);
             this.Name = "RegressionAnalysisNew";
@@ -782,7 +823,10 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -832,5 +876,9 @@
         private System.Windows.Forms.CheckBox checkBoxNormalizeValuesPage1;
         private System.Windows.Forms.CheckBox checkBoxNormalizeValuesPage2;
         private System.Windows.Forms.CheckBox checkBoxNormalizeValuesPage3;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem databaseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openRegresssionModelsDatabaseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveCurrentModelToolStripMenuItem;
     }
 }
