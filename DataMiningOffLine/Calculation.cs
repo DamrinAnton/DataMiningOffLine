@@ -12,7 +12,7 @@ namespace DataMiningOffLine
         public static string stringName = null;
         static ComponentResourceManager manager = new ComponentResourceManager(typeof(NormalDistribution));
 
-
+        //12333
         public static void DoStuff(List<KeyValuePair<DateTime, double>> data, int columnsCount,
             out List<KeyValuePair<double, double>> line, out List<KeyValuePair<string, double>> columns,
             out double expectedValue, out double standartDeviation, out double criterionHi, out double criticalCriterionHi, out double criterionKS, out double criticalCriterionKS, out double criterionF, out double criticalCriterionF, string parametrName, Option options)
